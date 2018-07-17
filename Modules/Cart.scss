@@ -1074,6 +1074,9 @@ body.guest-checkout-layout{
                     &:hover{
                         background: $btnAlternateColor;
                     }
+                    &.selected{
+                        background: $btnAlternateColor;
+                    }
                 }
             }
         }

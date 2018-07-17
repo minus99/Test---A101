@@ -7626,6 +7626,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           margin-right: 20px; }
         .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a:hover {
           background: #10aac1; }
+        .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a.selected {
+          background: #10aac1; }
     .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis > .servisListeFiltreContainer.emos_invisible {
       display: -webkit-box !important;
       display: -ms-flexbox !important;
