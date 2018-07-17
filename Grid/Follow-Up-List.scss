@@ -1,0 +1,131 @@
+.ems-page {
+    &-member{
+        .ems-page-default{
+            &-follow-list{
+                .page-top-desc, .ems-grid-follow-price{display:none;}
+                .price-report{
+                    display: none;
+                    .ems-message{margin-bottom: 20px;}
+                }
+                .report-holder{
+                    .inner-title{font-size: 18px; font-family: $medium; padding-bottom: 10px; padding-top: 30px;}
+                }
+                .ems-message-error{
+                    background: #fff;
+                    font-size: 25px;
+                    color: $lDark;
+                    font-family: $medium;
+                    padding-left: 0;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .ems-grid-default-stock{
+            .ems-grid-row{
+                .col-2,
+                .col-3,
+                .col-4{
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .col-1{
+                    width:90px;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .col-2{
+                    width:45%;
+                    font-family: $medium;
+                    font-size: 16px;
+                }
+                .ems-price{
+                    &:before{
+                        float: none !important;
+                        display: inline-block;
+                        font-size: 14px;
+                        color: $lDark;
+                        font-weight: bold;
+                        padding-right: 0 !important;
+                    }
+                }
+                .col-3{
+                    width:25%;
+                    text-align: center;
+                    line-height: 1;
+                    font-size: 25px;
+                    color: $lDark;
+                    font-family: $bold;
+                    .d{
+                        vertical-align: top;
+                        font-size: 16px;
+                    }
+                }
+                .col-4{
+                    width:15%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-page-default{
+                &-follow-list{
+                    .report-holder{
+                        .inner-title{
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            font-size: 18px;
+                        }
+                    }
+                    .ems-message-error{
+                        font-size: 18px;
+                        margin-top: 0;
+                        padding-top: 10px;
+                        padding-left: 20px;
+                    }
+                }
+            }
+            .ems-grid-default-stock{
+                .ems-grid-row{
+                    min-height: 140px !important;
+                    .col-1{
+                        width: 40%;
+                        height: 90px;
+                        position: absolute;
+                        top: 20px;
+                        left: 0;
+                        padding-left: 10px;
+                        text-align: left;
+                    }
+                    .col-2,
+                    .col-3,
+                    .col-4{
+                        width:100%;
+                        padding-left: 0;
+                        padding-right: 0;
+                        text-align: left;
+                    }
+                    .col-2{
+                        order: 1;
+                    }
+                    .col-3{
+                        order: 2;
+                    }
+                    .col-4{
+                        order: 3;
+                        margin-top: 15px;
+                        @include flex();
+                        @include flexDirection();
+                        justify-content: flex-start;
+                        .btnTakipListeStokSil{
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,293 @@
+.kutuOzellikFiltre{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 20;
+    max-height: 0;
+    overflow: hidden;
+    @include transition(max-height 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
+    .kutuHeaderDefault, .kutuFooterDefault, .urunKiyaslamaOzellik_temizle { display: none; }
+    .kutuBodyOzellikFiltre{
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 25px 10px 45px 10px;
+        > table{
+            > tbody{
+                @include flex();
+                flex-flow: row;
+                align-items: flex-start;
+                > tr{
+                    max-width: 180px;
+                    margin-left: 2%;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .urunKiyaslamaOzellik_ozellik{
+        .urunKiyaslamaOzellik_ozellikAd{
+            cursor: pointer;
+            position: relative;
+            font-family: $medium;
+            font-size: 14px;
+            padding: 15px 5px 15px 0;
+            .mobile-element {
+                display: none !important;
+            }
+        }
+        .urunKiyaslamaOzellik_ozellikIcerik{ 
+            table{
+                > tbody{
+                    >{
+                        tr{
+                            > td{
+                                width: auto;
+                                text-align: left;
+                                a{
+                                    display: block;
+                                    padding:5px 5px 5px 25px;
+                                    font-family: $regular;
+                                    font-size: 16px;
+                                    line-height: 15px;
+                                    position: relative;
+                                    &:before{
+                                        font-family:'icomoon';
+                                        content:'\e911';
+                                        font-size: 15px;
+                                        width: 15px;
+                                        height: 15px;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        margin-top: -7.5px;
+                                    }
+                                    &.link_selected{
+                                        &:before{
+                                            content:'\e91e';
+                                            color: $coverBg;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .urunKiyaslamaOzellik_btnArama{display:none;}
+}
+
+.ems-custom-filtered{
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #d3d3d3;
+    &-header{
+        span{
+            padding: 15px 15px 20px 15px;
+            display: block;
+            text-align: center;
+            font-family: $bold;
+            font-size: 30px;
+        }
+    }
+    &-body{
+        max-width: 750px;
+        margin: 0 auto;
+        > ul{
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            > li{
+                width: 33.333%;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 10px 20px 10px;
+                .title{
+                    padding-bottom: 5px;
+                    font-family: $regular;
+                    font-size: 13px;
+                    color: #bebebe;
+                    display: block;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    &-left{
+        padding-right:15px;
+    }
+    &-right{
+        padding-left:15px;
+    }
+    &-footer{
+        max-width: 480px;
+        margin: 0 auto 15px auto;
+        width: 100%;
+        > div{
+            width: 50%;
+            display: inline-block;
+            .btnDefault{
+                padding: 10px 10px 10px 10px;
+                &.btnDefaultFilteredEmpty{
+                    background: #1a1718;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .kutuOzellikFiltre{
+        position: absolute;
+        height: calc(100% - 50px);
+        max-height: calc(100% - 50px);
+        top: 0;
+        bottom:  inherit;
+        left:  inherit;
+        transition: none;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        z-index: inherit;
+        .kutuBodyOzellikFiltre{
+            max-width: 100%;
+            padding: 15px 10px;
+            > table{
+                > tbody{
+                    flex-flow: column;
+                    > tr{
+                        max-width: 100%;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .ems-custom-filtered{
+        border: none;
+        margin: 0;
+        &-header{
+            span{
+                font-size: 20px;
+            }
+        }
+        &-body{
+            max-width: 90%;
+            > ul{
+                > li{
+                    width: 100%;
+                }
+            }
+        }
+        &-left{
+            padding-right:10px;
+        }
+        &-right{
+            padding-left:10px;
+        }
+        &-footer{
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%;
+            > div{
+                width: 50%;
+                display: inline-block;
+                .btnDefault, .btnDefault span{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .ems-mobile{
+        &-filter-sort{
+            .ems-mobile-filter-btn{
+                display: none;
+            }
+            .ems-mobile-filter-text{
+                padding: 0 10px 10px 10px;
+                span{
+                    font-family: $medium;
+                    font-size: 14px;
+                }
+            }
+        }
+        &-filter-buttons, &-filter-buttons{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            a.btnDefault{
+                &.btnDefaultMobFilterAction{
+                    background: $btnColor;
+                    color: #fff;
+                }
+            }
+        }
+        &-fixed-popup{
+            position: fixed;
+            width: 100%;
+            height: calc(100vh - 120px);
+            z-index: 20;
+            bottom: -100%;
+            left: 0;
+            background: #fff;
+            will-change: bottom;
+            @include transition(bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
+            padding-top: 30px;
+        }
+        &-sort-popup-body{
+            position: absolute;
+            height: calc(100% - 120px);
+            width: 100%;
+            max-height: calc(100% - 120px);
+            overflow-x: hidden;
+            ul{
+                li{
+                    a{
+                        display: block;
+                        font-size: 16px;
+                        padding: 10px 10px 10px 40px;
+                        position: relative;
+                        &:before{
+                            font-family: 'icomoon';
+                            content: '\e911';
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            top: 50%;
+                            left: 10px;
+                            margin-top: -7.5px;
+                        }
+                    }
+                    &.selected{
+                        a{
+                            &:before{
+                                content: '\e91e';
+                                color: $btnAlternateColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    body.sort-popup-ready{
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    body.sort-popup-animate{
+        .ems-mobile{
+            &-fixed-popup{
+                bottom: 0;
+            }    
+        }
+    }
+
+}

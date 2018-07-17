@@ -1,0 +1,196 @@
+.ems-page-default{
+    &-member-login{
+        max-width: 900px;
+        margin:30px auto 0 auto;;
+        background: #fff;
+        padding: 35px 30px;
+        .ems-form-inner{
+            .ems-field{
+                .ems-form-label{
+                    font-size: 14px;
+                    top: 18px;
+                }
+                &.is-completed{
+                    .ems-form-label{
+                        top: 8px;
+                    }
+                }
+                &-remember{ display: none; }
+                &-checkout{
+                    display: block;
+                    .ems-form-obj{
+                        margin-bottom: 0;
+                    }
+                    a#lnkGuestCheckout{
+                        position: relative;
+                        display: inline-block;
+                        padding: 19px 10px 15px 10px;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        color: #fff;
+                        background: $btnAlternateColor;
+                        text-align: center;
+                        font-weight: normal;
+                        width: 100%;
+                        line-height: 16px;
+                        font-family: $medium;
+                    }
+                }
+                &-other{
+                    .ems-form-obj{
+                        font-family: $medium;
+                        font-size: 14px;
+                        color:$lDark;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                    .btn-login-page{ margin: 0; }
+                }
+                .ems-field-flex{
+                    @include flex();
+                    @include flexDirection();
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .btnLogin{
+                    min-width: 170px;
+                }
+                .btnFacebookLogin{
+                    background: #4266b2;
+                    .icon-ico_facebook{ display:none; }
+                }
+                .ems-form-obj-alternate{
+                    margin-right: 0;
+                }
+                &-submit{
+                    .ems-form-obj{
+                        a.btnYeniUyeKaydet{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            [id$="plhLoginSifreUnut1"]{
+                font-family: $medium;
+                font-size: 14px;
+                color:$lDark;
+            }
+            span.checkbox{
+                .sStylerMainWrp{
+                    span.cStyler{
+                        &:before{
+                            top: -2px;
+                            height: 15px;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ems-login, .ems-signup{
+        max-width: 390px;
+        margin: 0 auto;
+        .ems-login-tab{
+            display: table;
+            width: auto;
+            table-layout: fixed;
+            margin: 0 auto 40px auto;
+            > span, > a.btn-login-page{
+                font-size: 16px;
+                font-family: $medium;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 15px;
+                position: relative;
+            }
+            > span{
+                &:after{
+                    content:'';
+                    width: 100%;
+                    height: 3px;
+                    background: $coverBg;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .ems-login{
+        .ems-login-tab{
+            > span{
+                margin-right: 20px;
+            }
+        }
+    }
+    .ems-signup{
+        display: none;
+        .ems-login-tab{
+            > span{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+body.ems-signup-body{
+    .ems-page-default{
+        &-member-login{
+            .ems-login{
+                display: none;
+            }
+            .ems-signup{
+                display: block;
+            }
+        }
+    }
+}
+
+.ems-login-box {
+    .ems-message{
+        margin-bottom: 20px;
+    }
+    .ems-signup-header,
+    .ems-login-header{
+        span{
+            font-size: 30px;
+            font-family: $medium;
+            display: block;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .vailLogin{display: none;}
+    .login-page-layout{
+        .site-footer{
+            font-size: 0;
+            height: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+    .ems-page{
+        &-login{
+            padding-top: 0;
+        }
+    }
+    .ems-page-default{
+        &-member-login{
+            max-width: 100%;
+            margin-top: 0;
+            padding: 20px;
+            .ems-form-inner{
+                .ems-field{
+                    .btnLogin{
+                        min-width: 140px;
+                    }
+                }
+                [id$="plhLoginSifreUnut1"]{font-size:12px;}
+            }
+        }
+    }
+}

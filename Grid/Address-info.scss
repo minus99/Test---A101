@@ -1,0 +1,551 @@
+.ems-page {
+    &-member{
+        .ems-page-default-info{
+            .ems-field{
+                max-width: 390px;
+            }
+            .ems-form-inner{
+                .ems-field{
+                    .sStylerMainWrp.sStylerWrp_checkbox{
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                        z-index: 1;
+                        span.cStyler.checked:before{
+                            top: -3px;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .ems-page-default-address{
+            .page-top-desc{ display:none; }
+            .same-address{display: none;}
+            &.hidden{
+                .ems-address-form{
+                    .ems-message-error{
+                        display: none;    
+                    }
+                }
+            }
+            .ems-address-form{
+                position: relative;
+            }
+            .add-new-address {
+                position: absolute;
+                top: -25px;
+                right: 0;
+                &:empty{ display: none; }
+                .btnAdresEkle {
+                    font-family: $regular;
+                    padding: 8px 0 8px 10px;
+                    width: auto;
+                    background: transparent;
+                    span {
+                        font-size: 16px;
+                        font-family: $medium;
+                        color: $btnAlternateColor;
+                    }
+                    &:hover {
+                        span {
+                            color:$btnColor;
+                        }
+                    }
+                }
+            }
+            #validateTeslimat{
+                .ems-page-new-address{
+                    padding-top: 20px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-bottom: 0;
+                    margin-left: 0;
+                    .page-top-title{ display: none; }
+                    span[id$="lbfUYA_KAYITKULLANIMDA"]{
+                        .ems-message-red{
+                            background: $redColor;
+                            color: #fff;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .ems-address-form{
+            .ems-message{
+                &-error{
+                    background: #fff;
+                    color: $lDark;
+                    padding: 0;
+                    max-width: 900px;
+                    margin:0 auto;
+                        @include flex();
+                        @include flexDirection(column);
+                        align-items: center;
+                        padding:80px 20px;
+                        > span{
+                            font-family: $medium;
+                            font-size: 25px;
+                        }
+                        > *{
+                            padding: 10px 0;
+                        }
+                        .icon-ico_map, .icon-ico_map:before{
+                            font-size: 90px;
+                        }
+                        .icon-ico_map:before{
+                            color: $btnAlternateColor;
+                        }
+                    .new-address-add{
+                        span{
+                            text-decoration: underline;
+                            font-family: $medium;
+                            font-size: 16px;
+                            color: $btnAlternateColor;
+                        }
+                    }
+                }
+            }
+        }
+        .ems-grid-address{
+            &:empty{display:none;}
+            .ems-grid-row {
+                border-bottom: 2px solid $border;
+                .col-1{
+                    width:65%;
+                    padding-left:0;
+                    padding-right:0;
+                }
+                .col-2{
+                    width:35%;
+                    padding-left:0;
+                    padding-right:0;
+                    .item-2{
+                        @include flex();
+                        @include flexDirection(row-reverse);
+                    }
+                }
+                .col-3{display:none;}
+                .ems-address-name {
+                    @include flex();
+                    @include flexDirection(row);
+                    justify-content: flex-start;
+                    .adresTip1, .adresTip2 {
+                        width: 100px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-family: $medium;
+                        font-size: 18px;
+                        color:$lDark;
+                    }
+                    .address-title{
+                        font-family: $medium;
+                        font-size: 18px;
+                        color:$lDark;
+                        width: 170px;
+                        padding-right: 10px;
+                    }
+                    .address-name{
+                        padding-left:20px;
+                        padding-right:20px;
+                        flex-grow: 1;
+                        width: 100%;
+                    }
+                }
+                .btnAdresListeGuncelle {
+                    width: auto;
+                    display: inline-block;
+                    padding: 10px 20px 10px 0;
+                    &:before{
+                        content:'DÜZENLE';
+                        display: inline-block;
+                        font-family: $medium;
+                        font-size: 16px;
+                        color:$lDark;
+                    }
+                    i{ display: none; }
+                }
+                .btnAdresListeGuncelle.after-hide{
+                    &:before{
+                        content:'GÖRÜNTÜLE';
+                    }
+                }
+                .btnAdresListeSil {
+                    width: auto;
+                    padding: 10px 0 10px 25px;
+                    display: inline-block;
+                    color: $redColor;
+                }
+                &:last-child{
+                    border-bottom-width:0;
+                }
+            }
+        }
+        .ems-page-new-address{
+            padding: 0;
+        }
+    }
+}
+
+/*Teslimat*/
+.ems-page-adress-none{
+    padding-bottom: 0 !important;
+    .ems-page-cart-colmn-3,
+    .ems-page-cart-colmn-4{
+        display: none;
+    }
+    .ems-page-cart-wrapper{
+        padding-bottom: 25px;
+    }
+}
+
+.ems-page-cart-step1{
+    span[id$="lbfGNL_KAYITYOK"]{
+        &:empty{display:none;}
+    }
+    .ems-message{
+        &-error{
+            background: #fff;
+            color: $lDark;
+            padding: 0;
+            max-width: 900px;
+            margin:0 auto;
+            &:empty{ display: none; }
+            .inner{
+                @include flex();
+                @include flexDirection(column);
+                align-items: center;
+                padding:80px 20px;
+                > span{
+                    font-family: $medium;
+                    font-size: 25px;
+                }
+                > *{
+                    padding: 10px 0;
+                }
+                .icon-ico_map, .icon-ico_map:before{
+                    font-size: 90px;
+                }
+                .icon-ico_map:before{
+                    color: $btnAlternateColor;
+                }
+                .new-address-add{
+                    span{
+                        text-decoration: underline;
+                        font-family: $medium;
+                        font-size: 16px;
+                        color: $btnAlternateColor;
+                    }
+                }
+            }
+        }
+        &-red{
+            background: $redColor;
+            margin-bottom: 20px;
+        }
+    }
+    &.ems-page-adress-none{
+        .ems-page-cart-wrapper{
+            padding-top: 50px;
+        }
+        .ems-page-cart-colmn-2{background:#fff; width: 100%;}
+    }
+    &.form-hidden{
+        #validateTeslimat{
+            display: none;
+        }
+        .ems-page-cart-colmn-2{background:none;}
+    }
+    &.form-show{
+        .ems-message{
+            display: none;
+        }
+        #validateTeslimat{
+            display: table;
+        }
+        .ems-page-cart-colmn-2{background:#fff;}
+    }
+    #validateTeslimat{
+        width: 100%;
+        max-width: 410px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+
+.ems-page-new-address{
+    width: 100%;
+    padding: 0;
+    .page-top-title{
+        text-align: left;
+        padding-bottom: 20px;
+        a.btnDefault{
+            display: inline-block;
+            width: auto;
+            span{
+                &:before{
+                    font-family:'icomoon';
+                    content:'\e901';
+                    color: #221e1f;
+                    font-size: 12px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+        span[id$="lbfUYA_ADRESEKLE"]{display: none; padding-top: 30px;}
+    }
+    .page-top-desc{
+        margin-top: 0;
+    }
+    .ems-form{
+        &-inner{
+            .ems-field{
+                &-double{
+                    width: 50%;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                &.tcChecked{
+                    display: none;
+                    margin-bottom: 20px;
+                    .ems-form-label, .ems-form-obj{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    .ems-form-obj{
+                        margin-bottom: 0;
+                    }
+                    .ems-form-label{
+                        position: inherit;
+                        top: inherit;
+                        left: inherit;
+                        transition: none;
+                        line-height: 20px;
+                        span{
+                            display: block;
+                        }
+                    }   
+                }
+                &.adresTip{
+                    .ems-form-label{
+                        position: relative;
+                        top: inherit;
+                        left: inherit;
+                        display: none;
+                    }
+                    .ems-form-obj{
+                        text-align: center;
+                        a{
+                            padding:10px 20px;
+                            display: inline-block;
+                            color: #1a1718;
+                            font-family: $medium;
+                            &.emos_selected{
+                                color: $btnAlternateColor;
+                            }
+                        }
+                    }
+                }
+                .ems-form-obj{
+                    textarea{
+                        height: 130px;
+                        resize: none;
+                        line-height: 20px;
+                    }
+                    a.btnAdresIptal{
+                        background: none;
+                        color:$lDark;
+                        &:hover{
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kurumsalUyari {
+        display: none;
+        i {
+            margin-right: 5px;
+        } 
+    }
+    &.lnkAdrTip_1 {
+        .kurumsalUyari {
+            display: block;
+        }
+        .ems-form-inner .ems-field.tcChecked{
+            display: none;
+        }
+    }
+    &.lnkAdrTip_2 {
+        .kurumsalUyari {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-page-default-info{
+                .ems-form-inner{
+                    padding-top: 30px;
+                    .ems-field{
+                        max-width: inherit;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        &.button{
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .ems-address-form{
+                .ems-message-error{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    > span{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .ems-grid-address {
+                .ems-grid-row {
+                    padding-left: 20px !important;
+                    padding-right: 20px !important;
+                    .col-1{
+                        position: inherit !important;
+                        top: inherit !important;
+                        left: inherit !important;
+                        padding-left: 0 !important;
+                    }
+                    .col-1, .col-2{
+                        width:100% !important;
+                    }
+                    .ems-address-name {
+                        display: block;
+                        flex-direction: inherit;
+                        justify-content: inherit;
+                        .address-title{
+                            width: auto;
+                            display:inline-block;
+                            vertical-align: top;
+                        }
+                        .adresTip1, .adresTip2{
+                            display: inline-block;
+                            vertical-align: top;
+                            width: auto;
+                        }
+                        .address-name{
+                            display: block;
+                            flex-grow: inherit;
+                            margin-top: 20px;
+                            padding-left: 0;
+                            padding-right: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    .col-2{
+                        .item-2{
+                            justify-content: flex-end;
+                        }
+                    }
+                    .btnAdresListeGuncelle, .btnAdresListeSil{
+                        width: 50%;
+                        text-align: left;
+                        padding-right:0;
+                        padding-left: 0;
+                        margin-top: 10px; 
+                    }
+                }
+            }
+            .ems-page-default-address{
+                .add-new-address{
+                    position: inherit;
+                    top: inherit;
+                    right: inherit;
+                    .btnAdresEkle{
+                        width: 100%;
+                        padding: 19px 10px 15px 10px;
+                        font-family: $medium;
+                        text-align: center;
+                        background: $btnColor;
+                        span{
+                            font-size: 16px;
+                            color: #fff;
+                        }
+                        &:hover{
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                #validateTeslimat{
+                    .ems-page-new-address{
+                        .ems-form-inner{
+                            .ems-field{
+                                margin-left: 20px;
+                                margin-right: 20px;
+                                &.button{
+                                    margin-left: 0;
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-page-cart-step1{
+        .ems-message-error{
+            .inner{
+                padding-top: 50px;
+                padding-bottom: 20px;
+                > span{
+                    text-align: center;
+                    font-size: 16px;
+                }
+                .new-address-add{
+                    margin-top: 10px;
+                }
+            }
+        }
+        &.ems-page-adress-none{
+            .ems-page-cart-wrapper{
+                padding-top: 0;
+            }
+        }
+        #validateTeslimat{
+            padding-left: 20px;
+            padding-right: 20px;
+        } 
+    }
+
+    .ems-page-new-address{
+        .page-top-desc{
+            display: block;
+            padding-bottom: 10px;
+            > span{
+                br{ display: none;}
+            }
+        }
+        .ems-form{
+            &-inner{
+                .ems-field{
+                    &-double{width: 100%;}
+                    .ems-form-obj{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.ems-page {
+    &-member{
+        .ems-page-default-favorites{
+            .page-top-desc{ display:none; }
+            .ems-message-error{
+                background: #fff;
+                font-size: 25px;
+                color: $lDark;
+                font-family: $medium;
+                padding-left: 0;
+                margin-top: 10px;
+                &:empty{ display:none; }
+                span[id$="lbfGNL_KAYITYOK"]{
+                    display: block;
+                    text-align: center;
+                    &:empty{display: none;}
+                    &:before{
+                        font-family: 'icomoon';
+                        content:'\e90c';
+                        color: #687083;
+                        font-size: 70px;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                }
+            }
+            .ems-grid-default{
+                .ems-grid-row{
+                    .col-2,
+                    .col-3,
+                    .col-4{
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .col-1{
+                        width:90px;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    .col-2{
+                        width:30%;
+                        font-family: $medium;
+                        font-size: 16px;
+                    }
+                    .ems-price{
+                        width:32%;
+                        text-align: center;
+                        line-height: 1;
+                        font-size: 25px;
+                        color: $lDark;
+                        font-family: $bold;
+                        &:before{
+                            float: inherit;
+                            display: inline-block;
+                            font-size: 14px;
+                            color: $lDark;
+                            font-weight: bold;
+                            padding-right: 0;
+                        }
+                        .d{
+                            vertical-align: top;
+                            font-size: 16px;
+                        }
+                    }
+                    .ems-grid-piece{
+                        width:70px;
+                    }
+                    .col-5{
+                        width:28%;
+                        padding-left: 0;
+                        padding-right: 0;
+                        .btnSepeteAtFavori,
+                        .btnStokHaberciFavori,
+                        .btnFavoriListeSil{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                        }
+                        .btnStokHaberciFavori,
+                        .btnSepeteAtFavori{
+                            color: $btnAlternateColor;
+                        }
+                        .btnFavoriListeSil{
+                            margin-top: 15px;
+                            margin-top: 10px;
+                            span{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-page-default-favorites{
+                .ems-grid-default{
+                    .ems-grid-row{
+                        .col-1{
+                            width: 40%;
+                            height: 90px;
+                            position: absolute;
+                            top: 20px;
+                            left: 0;
+                            padding-left: 10px;
+                            text-align: left;
+                        }
+                        .col-2,
+                        .col-3,
+                        .col-4,
+                        .col-5 {
+                            width:100%;
+                            padding-left: 0;
+                            padding-right: 0;
+                            text-align: left;
+                        }
+                        .col-2{
+                            order: 1;
+                        }
+                        .col-3{
+                            order: 2;
+                        }
+                        .col-4{
+                            order: 3;
+                            margin-top: 10px;
+                        }
+                        .col-5{
+                            margin-top: 15px;
+                            order: 4;
+                            @include flex();
+                            @include flexDirection();
+                            justify-content: space-between;
+                            .btnFavoriListeSil, .btnSepeteAtFavori{
+                                width: auto;
+                            }
+                            .btnFavoriListeSil{
+                                margin-top: 0;
+                            }
+                        }
+                        .ems-name{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

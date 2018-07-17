@@ -1,0 +1,826 @@
+.ems-page {
+    &-member{
+        padding-top: 40px;
+        .kutuMesaj{
+            border-bottom: solid 2px #f3f5f9;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .kutuHeaderMesaj, .kutuFooterMesaj{ display: none;}
+            .kutuBodyMesaj{
+                display: table;
+                > div{
+                    display: table-cell;
+                    &.popupKutuMesaj_yeni, &.kutuMesaj_yeni{ display:none; }
+                    > a{
+                        display: block;
+                        padding: 10px 0 10px 50px;
+                        font-family: $medium;
+                        font-size: 14px;
+                    }
+                    &.kutuMesaj_gelenMesaj{
+                        > a{
+                            padding-left: 0;
+                        }
+                    }
+                    &.active{
+                        > a{
+                            color:$btnAlternateColor;
+                        }
+                    }
+                }
+            }
+        }
+        > .ems-container{
+            max-width: 1220px;
+        }
+        .ems-page-default{
+            max-width: 890px;
+            min-height: 375px;
+            padding: 40px;
+            background: #fff;
+            margin-left: 30px;
+            .page-top-title{
+                font-size: 25px;
+            }
+            .ems-form{
+                &-inner{
+                    .ems-field{
+                        .ems-form-obj{
+                            max-width: 390px;
+                            a.btnUyeBilgi{
+                                max-width: 250px;
+                                margin-top: 10px;
+                            }
+                        }
+                        &.bulletin, &.sms{
+                            .ems-form-obj {
+                                color: #3b4354;
+                                font-size: 12px;
+                                line-height: 20px;
+                                position: relative;
+                                padding-left: 30px;
+                                min-height: 20px;
+                            }
+                        }
+                        &.bonus{
+                            display: none;
+                            .ems-form-obj{
+                                > div{
+                                    span[id$="lbfUYE_BONUSMIKTARI"]{
+                                        font-size: 13px;
+                                        line-height: 35px;
+                                        color: #bebebe;
+                                        float: left;
+                                        min-width: 115px;
+                                    }
+                                    span[id$="lblUYE_BONUSMIKTARI"]{
+                                        background-color: #ececec;
+                                        border: solid 1px #bebebe;
+                                        margin-left: 115px;
+                                        margin-bottom: 15px;
+                                        display: block;
+                                        width: 100%;
+                                        padding: 8px 10px;
+                                        min-height: 35px;
+                                        line-height: 17px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-password{
+                .page-top-desc{
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .ems-col {
+            &-left, &-full{float:left;}
+            &-left{
+                width: 280px;
+            }
+            &-full{
+                width: calc(100% - 280px);
+            }
+        }
+        .member-menu-selecbox{ display: none; }
+        .member-menu {
+            background: #fff;
+            .mobile-title{display: none; }
+            h2{
+                font-weight: normal;
+                margin: 0;
+                background: $coverBg;
+                font-size: 25px;
+                font-family: $bold;
+                color: #fff;
+                padding: 16px 20px;
+            }
+            ul li a{
+                &:hover{
+                    color: $btnAlternateColor;
+                }
+            }
+            > ul{
+                padding: 10px;
+                > li{
+                    a{
+                        display: block;
+                        font-size: 16px;
+                        color: $darkBlack;
+                        font-family: $regular;
+                        padding:10px;
+                        position: relative;
+                    }
+                    &.selected{
+                        a{
+                            font-family: $medium;
+                            color: $btnAlternateColor;
+                        }
+                    }    
+                    &:last-child{
+                        a{
+                            font-family: $medium;
+                            color: $redColor;
+                        }
+                    }                
+                }
+                div.lvl2{
+                    display:none;
+                    padding-left: 20px;
+                    h3{display: none;}
+                    ul{
+                        li{
+                            a{
+                                display: block;
+                                font-size: 16px;
+                                color: $darkBlack;
+                                font-family: $regular;
+                                padding:10px;
+                            }
+                            &.selected{
+                                a{
+                                    font-family: $medium;
+                                    color: $btnAlternateColor;
+                                }
+                            }
+                        }
+                    }
+                }
+                h3{
+                    font-family: $medium;
+                    font-weight: normal;
+                    margin: 0;
+                    background: $coverBg;
+                    font-size: 25px;
+                    font-family: $bold;
+                    color: #fff;
+                    padding: 16px 20px;
+                }
+            }
+        }
+    }
+    &-corporate{
+        .ems-col-full{
+            .navigasyon{
+                padding: 0 20px;
+                margin-bottom: -10px;
+                margin-top: 10px;
+                @media (min-width: 850px){
+                    padding: 0;
+                    margin-bottom: 15px;
+                    margin-top: -30px;
+                }
+                > span{
+                    >a{
+                        display: inline-block !important;
+                        vertical-align: middle;
+                        font-size: 12px;
+                        color: #3b4354;
+                        max-width: 150px;
+                        -o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }  
+            span[id$="lblICR_METIN_TEMPLATE"]{
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+            }
+            .ems-page-content{
+                max-width: 890px;
+                min-height: 375px;
+                padding: 40px;
+                background: #fff;
+                margin-left: 30px;
+                .ems-page-content-title{
+                    font-family: $medium;
+                    font-size: 25px;
+                    padding-bottom: 20px;
+                    display: block;
+                    &:empty{ display:none; }
+                }
+                ol{
+                    padding-left: 20px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                p, ul li, ol li{
+                    font-size: 16px;
+                    margin: 3px 0;
+                    line-height:25px;
+                    color:#3b4354;
+                }
+                .ems-sss-content{
+                    &-body{
+                        ul{
+                            li{
+                                margin: 0 0 15px 0;
+                                .ems-sss-content-inline{
+                                    border: solid 2px #f3f5f9;
+                                    padding: 11px 45px 10px 20px;
+                                    position: relative;
+                                    cursor: pointer;
+                                    &:after{
+                                        font-family: 'icomoon';
+                                        content: "\e900";
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 10px;
+                                        width: 24px;
+                                        height: 24px;
+                                        line-height: 25px;
+                                        text-align: center;
+                                        margin-top: -12px; 
+                                    }
+                                    > span{
+                                        display: block;
+                                        font-family: $bold;
+                                        font-size: 16px;
+                                        text-align: left;
+                                    }
+                                }
+                                .ems-sss-content-accordion{
+                                    display: none;
+                                    padding: 0 20px 20px 20px;
+                                    p, p span, ul li{
+                                        font-family: $regular;
+                                        font-size: 16px;
+                                        line-height: 25px;
+                                        color: #3b4354;   
+                                    }
+                                }
+                                &.selected{
+                                    background: #f3f5f9;
+                                    .ems-sss-content-inline{
+                                        border: none;
+                                        &:after{
+                                            content: "\e905";
+                                        }
+                                    }
+                                    .ems-sss-content-accordion{
+                                        display: block;                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.ems-login{
+    .ems-col-full{
+        .navigasyon{
+            @media (min-width: 850px){
+                padding: 0;
+                margin-top: -10px;
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+.pageMesajGonder{
+    max-width: 890px;
+    min-height: 375px;
+    padding: 40px;
+    background: #fff;
+    margin-left: 30px;
+    .ems-page-default-info{
+        .page-top-desc{ display: none; }
+    }
+    .pageHeaderMesaj{
+        font-size: 25px;
+        span{
+            display: block;
+            padding-bottom: 20px;
+        }
+    }
+    .ems-page-default-info {
+        .ems-form-inner {
+            max-width: 390px; 
+            .ems-form-col {
+                width: 100%;
+                display: inline-block;
+                .ems-field{
+                    max-width: 100%;
+                    .site_textarea{
+                        width: 100% !important;
+                        height: 120px;
+                        resize: none;
+                    }
+                }
+            }
+            .msgCaptcha {
+                #imgCaptcha{
+                    margin-bottom: 15px;
+                }
+                span[id$="lbfUYE_KONTROLKODU"]{
+                    display: block;
+                }
+                input[id$="txtUYE_KONTROLKODU"]{
+                    padding-top: 5px;
+                    max-width: 195px;
+                }
+                .emos_invisible.captchaYenile{display:none !important;}
+            }
+            /*.frmLeft {
+                width: 49%;
+                display: inline-block;
+                float: left;
+                margin-right:2%; 
+                margin-bottom: 0;
+            }
+            .frmRight {
+                width: 49%;
+                display: inline-block;
+                float: right;
+                margin-bottom: 0;
+            }*/
+            /*.ems-form-full {
+                width: 100%;
+                display: inline-block;
+                .ems-field{
+                    max-width: 100%;
+                }
+                .site_textarea{
+                    width: 100% !important;
+                    height: 120px;
+                    resize: none;
+                }
+            }*/
+            .geneltelefon{
+                width: 100% !important;
+            }
+            .button {
+                padding-top: 20px;
+                /*a {
+                    width: 50%;
+                }*/
+            }
+        }
+    }
+}
+
+.ems-logoff{
+    .pageMesajGonder{
+        margin-left: auto;
+        margin-right: auto;
+        .ems-page-default-info .ems-form-inner {
+            .ems-field-tur{display: none;}
+        }   
+    }
+}
+
+.pageUyeSifreReset{
+    margin-left: auto;
+    margin-right: auto;
+}
+.pageSifremiUnuttum, .pageUyeSifreReset{
+    max-width: 890px;
+    min-height: 375px;
+    padding: 40px;
+    background: #fff;
+    .pageErrorDefault, .pageSifremiUnuttum_mesaj{
+        margin:15px 0;
+    }
+    .tableSifremiUnuttum, .tableUyeSifreReset{
+        max-width: 390px;
+        tbody{
+            tr{
+                th{
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: $lDark;
+                    width: 115px;
+                    text-align: left;
+                }
+                td{
+                    input{
+                        padding-top: 5px;   
+                    }
+                    &.tableSifremiUnuttum_tdCaptchaImage1{
+                        img{margin-bottom: 15px; margin-top: 15px;}
+                        div > span{display: block;}
+                    }
+                }
+            }
+            tr:nth-child(1){
+                th, td{
+                    display: block;
+                    width: 100%;
+                }
+            }
+            tr:nth-child(2){
+                th{ display: none; }
+            }
+            tr:nth-child(3){
+                th{ display: none; }
+            }
+        }
+        .pageLogin_btnUyeSifreGonder{
+            table > tbody > tr > th{ display: block; }
+        }
+        .btnUyeSifreGonder{margin-top: 20px;}
+    }
+    .tableUyeSifreReset{
+        tbody {
+            tr:first-child{
+                td{
+                    > span{
+                        display: block;
+                        padding-bottom: 10px;
+                        font-family: $regular;
+                        font-size: 15px;
+                        b{
+                            font-family: $medium;
+                            font-size: 15px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+            tr:nth-child(3){
+                table{
+                    display: table !important;
+                    tbody{
+                        tr{
+                            th{
+                                display: block;
+                                a{
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+.pageUyeSifreReset{
+    .pageHeaderUyeSifreReset{
+        span{
+            font-size: 25px;
+            font-family: $medium;
+            padding-bottom: 20px;
+            display: block;
+        }
+    }
+    .pageDescUyeSifreReset{
+        display: none;
+    }
+}
+
+.ems-logoff{
+    .ems-page-member .ems-col-left{display:none;}
+    .ems-page-member .ems-col-full{width:100%;}
+    .ems-page-member .ems-page-content{margin-left: 0; max-width: 100%;}
+    .ems-page-member .ems-page-default{margin-left: auto; margin-right: auto;}
+    .pageSifremiUnuttum{
+        margin: 0 auto;
+    }
+
+}
+
+.tableMesajGonder_mesajIcerik{
+    > div{
+        > table{
+            max-width: 340px;
+            > tbody{
+                > tr{
+                    > th{
+                        text-align: left;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 1;
+                        width: 115px; 
+                    }
+                    > td{
+                        input, textarea{
+                            width: 100% !important;
+                            margin-bottom: 15px;
+                        }
+                        textarea{resize: none; height: 100px;}
+                        .sStylerMainWrp.sStylerWrp_select{margin-bottom:15px;}
+                    }
+                }
+            }
+        }
+    }
+    > table{
+        max-width: 340px;
+        > tbody{
+            > tr{
+                > th{
+                    text-align: left;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 1;
+                    color: $lDark;
+                    width: 115px; 
+                }
+                > td{
+                    textarea{resize: none; height: 120px;}
+                    input, textarea{
+                        width: 100% !important;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+
+    .pageSifremiUnuttum, .pageUyeSifreReset{
+        padding: 20px;
+    }
+    .pageUyeSifreReset{
+        .pageHeaderUyeSifreReset{
+            display: block;
+            span{font-size: 19px; text-align: center;}
+        }
+        .tableUyeSifreReset{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .ems-member-page-layout{
+        .site-footer{
+            height: 0;
+            font-size: 0;
+            overflow: hidden;
+        }
+    }
+
+    .ems-page {
+        &-member{
+            background: #fff;
+            padding-top: 0;
+            .kutuMesaj{
+                border-bottom: none;
+                margin-bottom: 0;
+                .kutuBodyMesaj{
+                    width: 100%;
+                    > div{
+                        display: block;
+                        > a{
+                            padding: 11px 20px;
+                            border-bottom:2px solid $lGray;
+                        }
+                        &.kutuMesaj_gelenMesaj{
+                            > a{
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            > .ems-container{
+                padding-left:0;
+                padding-right:0;
+            }
+            .sStylerMainWrp.member-menu-selecbox.sStylerWrp_select{
+                .sStylerWrp{
+                    &:before{
+                        position: absolute;
+                        top: 5px;
+                        left: 10px;
+                        content:'Hesabım';
+                        display: inline-block;
+                        font-size: 14px;
+                        font-family: $regular;
+                        line-height: 1;
+                    }
+                    &:after{
+                        right: 20px;
+                        font-size: 12px;
+                        margin-top: -6px;
+                    }
+                }
+            }
+            .ems-page-default{
+                max-width: inherit;
+                padding: 0;
+                margin-left: 0;
+                .ems-form{
+                    &-inner{
+                        .ems-field{
+                            .ems-form-obj{
+                                max-width: 100%;
+                                a.btnUyeBilgi{
+                                    max-width: 100%;
+                                }
+                            }
+                            &.bonus{
+                                .ems-form-obj{
+                                    > div{
+                                        span[id$="lbfUYE_BONUSMIKTARI"]{
+                                            line-height: 45px;
+                                        }
+                                        span[id$="lblUYE_BONUSMIKTARI"]{
+                                            width: inherit;
+                                            min-height: 45px;
+                                            line-height: 27px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-password{
+                    .ems-form-inner{
+                        padding-top: 20px;
+                        .ems-field{
+                            margin-left:20px;
+                            margin-right:20px;
+                            &.button{
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .member-menu-selecbox{ display: block; }
+            .member-menu {
+                display: none;
+                > ul{
+                    > li{
+                        a{
+                            display: block;
+                            font-size: 13px;
+                            color: #727272;
+                            font-family: $regular;
+                            padding: 11px 10px 11px 40px;
+                            position: relative;
+                            &:before{
+                                content: '';
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 100%;
+                                background: #4c4c4c;
+                                position: absolute;
+                                left: 2.5px;
+                                top: 50%;
+                                margin-top: -4px;
+                            }
+                        }
+                        &.selected{
+                            a{
+                                font-family: $bold;
+                                color: #4c4c4c;
+                                &:before{
+                                    width: 13px;
+                                    height: 13px;
+                                    background: $fdYellow;
+                                    margin-top: -6px;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ems-col {
+                &-left, &-full{float:none; width: 100%;}
+                &-left{
+                    padding: 0;
+                }
+            }
+            .ems-page-member-password{
+                .ems-form{
+                    &-inner{
+                        .ems-field{
+                            &.button{
+                                .ems-form-obj{
+                                    margin-left: 0 !important;
+                                    a.btnDefault {padding-top: 20px; padding-bottom: 20px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-corporate{
+            .ems-col-full{
+                .ems-page-content{
+                    max-width: 100%;
+                    min-height: auto;
+                    padding: 30px 20px;
+                    margin-left: 0;
+                    .ems-page-content-title{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .pageMesajGonder{
+        max-width: inherit;
+        padding: 0;
+        margin: 0;
+        .tableMesajGonder_aciklama{display: none;}
+        .pageMesajGonder_CaptchaImage1{
+            max-width: 100%;
+            input{max-width: 100%;}
+        }
+        .pageMesajGonder_btnMesajGonder{
+            max-width: 100%;
+            > table{
+                a.btnDefault {
+                    max-width: 100%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .ems-page-default-info{
+            .ems-form-inner{
+                max-width: 100%;                
+                .ems-form-col, .ems-form-full{
+                    padding-left:20px;
+                    padding-right:20px;
+                }
+                .frmLeft, .frmRight{
+                    width: 100%;
+                    float: none;
+                }
+                .ems-field{
+                    margin-left:0;
+                    margin-right:0;
+                }
+                .frmLeft{
+                    margin-right: 0;
+                }
+                .msgCaptcha {
+                    input[id$="txtUYE_KONTROLKODU"]{
+                        max-width: 100%;
+                    }
+                }
+                .button{
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .tableMesajGonder_mesajIcerik{
+        > div{
+            > table{max-width: 100%;}
+        }
+        > table{max-width: 100%;}
+    }
+    .ems-corporate-layout{
+        .site-footer{
+            height: 0;
+            font-size: 0;
+            overflow: hidden;
+        }
+    }
+    .pageSifremiUnuttum{
+        padding: 20px;
+        .pageHeaderSifremiUnuttum{
+            display: block;
+            padding-bottom: 20px;
+        }
+    }
+    .pageSifremiUnuttum .tableSifremiUnuttum{
+        max-width: 100%;
+    }
+}

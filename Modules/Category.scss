@@ -1,0 +1,59 @@
+.kutuSolMenuTree{
+    .sStylerMainWrp.sStylerWrp_select, .kutuHeaderSolMenuTree{display:none;}
+    > a{ display:none; }
+    .kutuBodyDefault{
+        background: #fff;
+        > ul{
+            > li{
+                b{display:none;}
+                > a{
+                    display: block;
+                    background: $btnAlternateColor;
+                    font-size: 25px;
+                    font-family: $bold;
+                    color: #fff;
+                    padding: 16px 20px;
+                }
+                > ul{
+                    @include flex();
+                    @include flexDirection(column);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    > li{
+                        text-align: left;
+                        position: relative;
+                        a{
+                            display: block;
+                            padding: 15px 10px;
+                            font-family: $regular;
+                            font-size: 16px;
+                        }
+                        &.act, &:hover{
+                           color:$btnAlternateColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .kutuSolMenuTree{
+        position:relative;
+        .sStylerMainWrp.sStylerWrp_select{
+            display: block;
+        }
+        > a{
+            position:absolute;
+            top: 5px;
+            left: 10px;
+            display: inline-block;
+            font-size: 14px;
+            font-family: "regular";
+            line-height: 1;
+            z-index: 1;
+        }
+        .kutuBodyDefault{display:none;}
+    }
+}

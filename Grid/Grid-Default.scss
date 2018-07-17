@@ -1,0 +1,173 @@
+.ems-page {
+    &-member{
+        .ems-grid-default {
+            .ems-grid-header {
+                display: none;
+            }
+            .ems-grid-row {
+                padding: 30px 0;
+                border-bottom: 1px solid $inputborder;
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .ems-grid-img {
+                    width: 90px;                    
+                    text-align: left;
+                    a {display: inline-block;}
+                    img {
+                        max-height: 90px;
+                    }
+                }
+                .ems-grid-name {
+                    padding: 0 20px;
+                    width: 45%;
+                    span {
+                        font-size: 13px;
+                        font-family: $regular;
+                    }
+                    a {
+                        span {
+                            &.prdItem {
+                                font-family: $bold;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                .ems-grid-code {
+                    a {
+                        font-size: 13px;
+                        font-family: $regular;
+                        color: $lGray;
+                        margin-top: 5px;
+                        display: block;
+                    }
+                }
+                .ems-grid-piece {
+                    width: 25%;
+                    text-align: center;
+                    input {
+                        width: 100% !important;
+                        max-width: 65px;
+                        text-align: center;
+                        position: relative;
+                        height: 44px;
+                        background: $inputborder;
+                        padding-top: 5px;
+                        line-height: 34px;
+                    }
+                    a {
+                        border: 1px solid $inputborder;
+                        display: inline-block;
+                        padding: 7px;
+                        color: $inputborder;
+                        height: 30px;
+                        &:hover {
+                            background: $fdYellow;
+                            color: $lDark;
+                            border: 1px solid $fdYellow;
+                        }
+                    }
+                }
+                .ems-grid-price-total {
+                    width: 20%;
+                    text-align:center;
+                    font {
+                        text-align: center;
+                        &:before {
+                            font-family: $tl;
+                            content: 't';
+                            font-size: 15px;
+                            display: inline-block;
+                        }
+                        &.brutFiyat {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+                .ems-price{
+                    color: #221e1f;
+                    &:before{
+                        float: left;
+                        font-family:$tl;
+                        content:'t';
+                        font-size: 15px;
+                        color: #221e1f;
+                        padding-right: 3px;
+                    }
+                }
+                .ems-grid-delete {
+                    width: 10%;
+                    text-align: right;
+                    padding-right: 10px;
+                }
+                &:last-child {
+                    border-bottom-width: 0;
+                }
+                .kdvDahil{display: none;}
+            }
+        }
+        a.btnTakipListeStokTumSil, a.btnFavoriListeTumSil{
+            margin-top: 20px;
+            max-width: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-default {
+                margin-top: 30px;
+                .ems-grid-row {
+                    position: relative;
+                    @include flex();
+                    @include flexDirection(column);
+                    align-items: end;
+                    flex-direction: column;
+                    padding: 20px 20px 20px 40%;
+                    min-height: 180px;
+                    border-bottom: 0;
+                    border-top: 2px solid #e8eaf1;
+                    .col-1{
+                        width: 40%;
+                        height: 90px;
+                        position: absolute;
+                        top: 20px;
+                        left: 0;
+                        padding-left: 10px;
+                        text-align: left;
+                    }
+                    .ems-grid-img {
+                        img {
+                            max-height: 90px;
+                        }
+                    }
+                    .ems-name, .ems-price{
+                        font-size: 15px;
+                        font-family: $bold;
+                        margin-top: 10px;
+                    }
+                    > div {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        flex: inherit;
+                        max-width: inherit;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    &:last-child {
+                        border-bottom:1px solid $lGray;
+                    }
+                }
+            }
+            a.btnTakipListeStokTumSil, a.btnFavoriListeTumSil{
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,337 @@
+.ems-page {
+    &-member{
+        .ems-grid-message{
+            .ems-grid-header:first-child{
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                > div{
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #3b4354;
+                    padding-top:10px;
+                    padding-bottom: 10px; 
+                }
+                .col-1{
+                    width:30px;
+                    text-align: center;
+                    padding: 0;
+                    span{
+                        display: inline-block;
+                        text-indent: -999em;
+                    }
+                }
+                .col-2{width:20%;}
+                .col-3{width:55%;}
+                .col-4{width:15%;}
+                border-bottom: 1px solid $inputborder;
+            }
+            .ems-grid-row{
+                padding: 19px 0 !important;
+                > div{
+                    font-size: 14px;
+                    color: $wGray;
+                    text-align: center;
+                }
+                .col-1{
+                    width:30px;
+                    text-align: center;
+                    padding: 0;
+                }
+                .col-2{
+                    width:20%;
+                    > a{
+                        display: inline-block;
+                        max-width: 90px;
+                        &.lnkPopupMesajOku { display: none; }
+                    }
+                }
+                .col-3{width:55%;}
+                .col-4{width:15%;}
+                .ems-grid-code a{margin-top: 0 !important;}
+            }
+        }
+    }
+}
+
+.ems-page-default{
+    &-message{
+        .page-top-desc{ display: none; }
+    }
+    &-message-detail{
+        .ems-message-type, .msgDtHeader, .msgDtContent{
+            li{
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+                text-align: center;
+                > span{
+                    display: table-cell;
+                    vertical-align: middle;
+                    border: 1px solid $lGray;
+                    padding: 10px;
+                    &:first-child{
+                        border-right: 0;
+                    }
+                }
+                &:first-child{
+                    > span{border-bottom: 0; font-size: 16px; font-family:$medium; color: $lDark;}
+                }
+            }
+        }
+        .msgDtList{
+            margin-bottom: 30px;
+            &:before, &:after{
+                content:'';
+                font-size: 0;
+                width: 100%;
+                height: 0;
+                clear: both;
+                height: 0;
+                overflow: hidden;
+            }
+            .msgDtHeader, .msgDtContent{
+                ul{
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    text-align: center;
+                    li{
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                        border: 1px solid $lGray;
+                        &:first-child{border-right:0;}
+                        > span{
+                            border:none;
+                            display: block;
+                            &:first-child{
+                                font-size: 13px;
+                                color: $lDark;
+                                font-family: $regular;
+                            }
+                        }
+                    }
+                }
+            }
+            .msgDtHeader{
+                ul{
+                    li{
+                        border-bottom: 0;
+                        > span:first-child{font-size: 16px; font-family:$medium; color: $lDark;}
+                    }
+                }
+            }
+        }
+        .tableTitleMesajGonder{
+            span{
+                font-size: 15px;
+                font-family: $bold;
+                padding: 30px 0;
+                display: block;
+            }
+        }
+        .tableMesajGonder_aciklama{
+            font-size: 13px;
+            padding-bottom: 30px;
+        }
+        .btnMesajKonuYeniGonder{margin-right: 5%;}
+        .btnMesajKonuYeniGonder, .btnMesajCozuldu{
+            max-width: 250px;
+        }
+        .mesajGonder{
+            .tableMesajMetin{
+                > tbody{
+                    > tr{
+                        > th{
+                            display: block;
+                            width: 100%; 
+                            padding-bottom: 10px;
+                        }
+                        > td{
+                            display: block;
+                            width: 100%; 
+                        }
+                        &.tableMesaj_trlbfUYE_ACIKLAMA{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .pageMesajGonder_CaptchaImage1{
+                max-width: 250px;
+                > div{
+                    img, input{ margin-bottom: 10px;}
+                    > span{display: block; font-size: 13px;}
+                }
+            }
+            .pageMesajGonder_btnMesajGonder{
+                table{
+                    display: table !important;
+                    text-align: left;
+                    a.btnDefault {
+                        max-width: 250px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-message{
+                display: grid;
+                grid-template-columns: 40% 60%;
+                margin: 20px;
+                .ems-grid-header{
+                    display: grid;
+                    grid-template-columns: 100%;
+                    width:100%;
+                    border-left:2px solid $lGray;
+                    border-bottom:2px solid $lGray;
+                    margin-bottom: 20px;
+                    &:first-child{
+                        display: grid;
+                        grid-template-columns: 100%;
+                        width:100%;
+                        table-layout: inherit;
+                        > div{
+                            display: block;
+                            flex: 100%;
+                            max-width: 100%;
+                            text-align: left;
+                            padding: 10px;
+                            min-height: 55px;
+                            max-height: 55px;
+                            overflow: hidden;
+                            color: $wGray;
+                            &.col-1,
+                            &.col-2,
+                            &.col-3,
+                            &.col-4{
+                                width: 100%;
+                            }
+                            &.col-1{
+                                text-align: left;
+                                min-height: 55px;
+                                height: 55px;
+                                padding: 10px;
+                                line-height: 34px;
+                                span{ text-indent:inherit; }
+                            }
+                        }
+                        border-bottom-width: 2px;
+                    }
+                    > div{
+                        display: block;
+                        flex: 100%;
+                        max-width: 100%;
+                        padding: 10px;
+                        line-height: 34px;
+                        min-height: 55px;
+                        max-height: 55px;
+                        overflow: hidden;
+                        border-top:2px solid $lGray;
+                        color: $wGray;
+                        &.col-3{
+                            height: 110px;
+                            max-height: 110px;
+                        }
+                    }
+                }
+                .ems-grid-row{
+                    display: grid;
+                    grid-template-columns: 100%;
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                    flex-direction: inherit;
+                    align-items: inherit;
+                    min-height: auto;
+                    border-top: none;
+                    border-left:2px solid $lGray;
+                    border-right:2px solid $lGray;
+                    border-bottom:2px solid $lGray;
+                    margin-bottom: 20px;
+                    > div{
+                        flex: 100%;
+                        max-width: 100%;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        line-height: 34px;
+                        min-height: 55px;
+                        max-height: 55px;
+                        overflow: hidden;
+                        border-top:2px solid $lGray;
+                        color: $wGray;
+                        &.col-1,
+                        &.col-2,
+                        &.col-3,
+                        &.col-4{
+                            width: 100%;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        &.col-1{
+                            position: inherit;
+                            top: inherit;
+                            left: inherit;
+                            min-height: 55px;
+                            height: 55px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        &.col-2, &.col-3{
+                            line-height: 1;
+                        }
+                        &.col-3{
+                            height: 110px;
+                            max-height: 110px;
+                            > a:first-child{
+                                max-height: 90px;
+                                overflow: hidden;
+                                display: block;
+                            }
+                        }
+                        &.ems-name{
+                            margin-top: 0;
+                            font-family: $regular;
+                            font-size: 14px;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom-width:2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-page-default{
+        &-message-detail{
+            .btnMesajKonuYeniGonder{margin-right:0;}
+            .btnMesajKonuYeniGonder, .btnMesajCozuldu{
+                max-width: 100%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .btnMesajCozuldu{margin-top: 20px;}
+            .mesajGonder{
+                .pageMesajGonder_CaptchaImage1{max-width: 100%;}
+                .pageMesajGonder_btnMesajGonder{
+                    table{
+                        a.btnDefault {
+                            max-width: 100%;
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

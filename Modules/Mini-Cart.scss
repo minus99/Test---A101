@@ -1,0 +1,363 @@
+.mod-mini-cart {
+    margin-right: 15px;
+    position: relative;
+    &-header{
+        .ems-cart-info{
+            cursor: pointer;
+            font-family: $medium;
+            font-size: 16px;
+            padding: 22px 15px;
+            text-align: center;
+            color:#fff;
+            position: relative;
+            @include transition(all 333ms cubic-bezier(0.25, 0.25, 0.75, 0.75));
+            > span{
+                display: inline-block;
+                span{
+                    margin-left: 20px;
+                }
+                span, i.icon-ico_mini-cart{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                i.icon-ico_mini-cart, i.icon-ico_mini-cart:before{
+                    font-size:29px;
+                }
+                i.icon-ico_mini-cart{
+                    &:before{
+                        color: #fff;
+                        @include transition(all 333ms cubic-bezier(0.25, 0.25, 0.75, 0.75));
+                    }
+                }
+            }
+            span[id$="lbfKUTU_URUN"]{ display: none; }
+            span[id$="lblUrunAdet"]{
+                background: $fdYellow;
+                border-radius: 100%;
+                padding: 2px;
+                font-size: 15px;
+                position: absolute;
+                top: 10px;
+                left: 30px;
+                width: 23px;
+                height: 23px;
+                color: #000;
+                line-height: 21px;
+            }
+        }
+    }
+    &-body{
+        background: #fff;
+        width: 370px;
+        position: absolute;
+        top: 73px;
+        left: 50%;
+        z-index: 10;
+        padding: 0;
+        display: none;
+        opacity: 0;
+        @include setTransform(translateX(-50%));
+        @include animation(cart 333ms ease-in-out);
+        span.kutuSepet_urunYok{
+            > span{
+                .mini-cart-text{
+                    text-align: center;
+                    color: $lDark;
+                    > span{
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 100%;
+                        background: $border;
+                        margin: 0 auto 10px auto;
+                        position: relative;
+                        display: block;
+                        i.icon-ico_mini-cart{
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            right: 0;
+                            margin: -25px auto 0 auto;
+                            width: 50px;
+                            height: 50px;
+                        }
+                        i.icon-ico_mini-cart, i.icon-ico_mini-cart:before{
+                            font-size:50px;
+                        }
+                        i.icon-ico_mini-cart:before{color:#687083;}
+                    }
+                    p{
+                        font-family: $regular;
+                        margin: 0;
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                    .cart-empty-text{
+                        font-size: 16px;
+                        font-family: $medium;
+                        padding-bottom: 10px;
+                    }
+                    .btnDefaultMiniCart{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        .ems-col{
+            &-total,
+            &-link{
+                display: none;
+            }
+            &-total{
+                padding: 20px;
+                background: $border;
+                span[id$="lbfkutuSepet1"] {
+                    text-align: left;
+                    font-family: $medium;
+                    font-size: 14px;
+                    b{font-weight: normal;}
+                }
+                span[id$="lblUrunTutari"] {
+                    font-family: $bold; 
+                    text-align: right;
+                    font-size: 25px;
+                    .d{
+                        font-size: 16px;
+                        vertical-align: top;
+                        display: inline-block;
+                        padding-top: 1px;
+                    }
+                    
+                    &:before {
+                        content: 't';
+                        font-family: "tl";
+                        margin-right: 3px;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &-link{
+                > a{
+                    padding-top: 17px;
+                    padding-bottom: 16px;
+                    display: block;
+                    background:$btnColor;
+                    text-align: center;
+                    margin-top: 20px;
+                    span{
+                        font-family: $medium;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                    &:hover{
+                        background: $btnAlternateColor;
+                    }
+                }
+            }
+            &-link-home{
+                span{
+                    .btnDefaultMiniCartHome{
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        .ems-col-total{
+            .ems-col{
+                &-redirect{
+                    > span{
+                        width: 50%;
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: $lDark;
+                        s{ display: none; }
+                    }
+                }
+            }
+        }
+    }
+    div[id$="plhKSepet_sepetIcerik1"]{
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: $coverBg;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $coverBg; 
+        }
+        &:hover {
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+        }
+    }
+    .kutuSepet_icerik{
+        max-height: 300px;
+        overflow-x: hidden;
+        .ems-col{
+            min-height: 75px;
+            border-bottom: 2px solid $border;
+            overflow: hidden;
+            @include transition(padding-left 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
+            padding:0 15px 0 10px;
+            &:before, &:after{
+                content:'';
+                width: 100%;
+                height: 0;
+                font-size: 0;
+                clear: both;
+                display: table;
+            }
+            > div{ 
+                * { color: $lDark; }
+            }
+            .cart-prd-left{
+                position: absolute;
+                top: 0;
+                left: -100px;
+                width: 50px;
+                height: 100%;
+                z-index: 1;
+                text-align: center;
+                transition-delay: .1s;
+                will-change: left;
+                @include transition(left 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
+                .cart-prd-remove{
+                    a{
+                        display: block;
+                        padding: 31px 17px;
+                        transition: none;
+                        i.icon-ico_remove, i.icon-ico_remove:before{
+                            font-size: 13px;
+                        }
+                        i.icon-ico_remove{
+                            &:before{
+                                color: $lDark;
+                            }    
+                        }
+                        span{display: none;}
+                    }
+                }
+            }
+            .cart-prd-right{
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                > div{
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding:15px 5px;
+                    text-align: center;
+                }
+                .cart-prd-code, .cart-prd-quantity{
+                    display: none;
+                }
+                .cart-prd-image{
+                    width: 40px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    img {
+                        width: 40px;
+                    }
+                }
+                .cart-prd-name{
+                    width: 110px;
+                    text-align: left;
+                    span{
+                        display: block;
+                        max-height: 30px;
+                        height: 30px;
+                        overflow: hidden;
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+                .cart-prd-price{
+                    font-family: $bold;
+                    font-size: 25px;
+                    width: 120px;
+                    text-align: right;
+                    .d{
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: 16px;
+                        padding-top: 1px; 
+                    }
+                    &:before {
+                        content: 't';
+                        font-family: "tl";
+                        display: inline-block;
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            &:hover{
+                .cart-prd-left{
+                    left: 0;
+                }
+                padding-left:50px;
+            }
+        }
+    }
+    &-footer{
+        display: none;
+    }
+}
+
+body.basket-empty{ 
+    .mod-mini-cart{
+        &-body{
+            padding: 20px 20px 20px 20px;
+        }
+    }
+}
+
+body.basket-full{
+    .mod-mini-cart {
+        &-body{
+            .ems-col{
+                &.ems-col-total,
+                &.ems-col-link{
+                    display: block;
+                }
+            }
+        }
+    } 
+}
+
+body.mini-cart-ready{
+    .mod-mini-cart{
+        &-header{
+            .ems-cart-info{ 
+                background: #fff;
+                color: $lDark;
+                i.icon-ico_mini-cart{
+                    &:before{
+                        color: #687083;
+                    }
+                }
+            }
+        }
+        &-body{
+            display: block;
+            opacity: 1;
+        }
+    }
+    .vailCart{ opacity: .3; visibility: visible; }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-mini-cart{
+        display: none;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,107 @@
+.widget{
+    display: none;
+    &-active{
+        display: block;
+    }
+    .swiper-pagination{ display:none; }
+    &.visilabs-widget{
+        .swiper-pagination{ display:none; }    
+    }
+    &-free-mode{
+        .swiper-button-prev,
+        .swiper-button-next,
+        .swiper-pagination{
+            display: none;
+        }
+    }
+    .swiper-button-prev, .swiper-button-next{
+        margin-top: 20px;
+    }
+    &.widget-new-shoes, &.widget-clothing {
+        .swiper-inner {
+            overflow: hidden !important;
+            position: relative; 
+        }
+    }
+    
+    ul.emosInfinite{
+        .ems-prd{ width: 25%; }
+    }
+    &.no-controls{
+        .swiper-button-prev,
+        .swiper-button-next,
+        .swiper-pagination{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    
+    .widget{
+        ul.emosInfinite{
+            padding: 0;
+            .ems-prd{
+                width: 100%;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev{
+            display: none;
+        }
+        &.widget-new-shoes, &.widget-clothing  {
+            .swiper-inner {
+                .swiper-wrapper {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .ems-tab-mobi {
+        .widget{
+            &.visilabs-widget{
+                h2{
+                    cursor: pointer;
+                    border-top: 1px solid #231f20;
+                    border-bottom: 1px solid #231f20;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding: 20px 45px 20px 30px;
+                    background: #f2f2f2;
+                    position: relative;
+                    text-align: left;
+                    margin-top: -1px;
+                    &:after{
+                        font-family:'icomoon';
+                        content:'\e914';
+                        font-size: 16px;
+                        display: inline-block;
+                        position: absolute;
+                        top: 50%;
+                        right: 30px;
+                        margin-top: -8px;
+                    }
+                }
+                &.opened{
+                    h2{
+                        border-bottom: none;
+                        &:after{content:'\e910';}
+                    }
+                }
+                .swiper-inner{
+                    max-height: 0;
+                    overflow: hidden;
+                }
+                &.opened{
+                    .swiper-inner{
+                        max-height: 100%;
+                        overflow: visible;
+                        padding: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+}

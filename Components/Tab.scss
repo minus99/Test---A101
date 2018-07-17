@@ -1,0 +1,145 @@
+.ems-tab {
+    position: relative;
+    &-inner{
+        > ul.navigation-js{
+            display: table;
+            width: 100%;
+            > li{
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                a{
+                    display: inline-block;
+                }
+            }
+        }
+        > ul.content-js{
+            > li{
+                display: none;
+                > a{
+                    display: none;
+                }
+                &.selected{
+                    display: block;
+                }
+                .content{
+                    position: relative;
+                }
+            }
+        }
+    }
+    
+    &-detail{
+        .ems-tab-inner{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 0 auto;
+            padding-top: 30px;
+            > ul.navigation-js{
+                max-width: 100%;
+                margin: 0 auto 40px auto;
+                li{
+                    a{
+                        width: 100%;
+                        padding: 22px 0 21px 0;
+                        background: $lGray;
+                        span{
+                            font-family: $medium;
+                            font-size: 16px;
+                            color: $lDark;
+                        }
+                    }
+                    &.selected{
+                        a{
+                            background: $lDark;
+                            span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            > ul.content-js {
+            }
+        }
+    }
+    &-sss{
+        .ems-tab-inner{
+            > .navigation-js{display:none;}
+
+            > ul.content-js > li{
+                border-bottom: 3px solid #ededed;
+                &:first-child{
+                    border-top: 3px solid #ededed;    
+                }
+                > a{
+                    padding: 20px 60px 20px 10px;
+                    display: block;
+                    position: relative;
+                    text-align: left;
+                    span{
+                        font-size: 20px;
+                        font-family: $bold;
+                        color: #231f20;
+                    }
+                    &:after{
+                        content:'\e914';
+                        font-family: 'icomoon';
+                        font-size: 8px;
+                        width: 8px;
+                        height: 8px;
+                        color: #231f20;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -4px;
+                        right: 30px;
+                    }
+                }
+                display: block;
+                &.selected{
+                    > a{
+                        &:after{
+                            content:'\e910';
+                        }
+                    }
+                    .content{
+                        display: block;
+                    }
+                }
+                .content{
+                    display: none;
+                    text-align: left;
+                    padding:0 50px 20px 20px;
+                    font-size: 18px;
+                    font-family: $regular;
+                    p{
+                        margin-top: 10px;
+                        &:first-child{margin-top: 0;}
+                        &.margin10{ margin-top: 10px; }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-tab {
+        &-detail{
+            .ems-tab-inner{
+                padding: 20px 0;
+                ul.navigation-js{
+                    margin-bottom: 30px;
+                }
+                > ul.content-js{
+                    > li{
+                        .content{
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
