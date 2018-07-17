@@ -97,6 +97,9 @@
     }
     &-step1{
         .ems-page-new-address .ems-form-inner .ems-field.tcChecked{ display: none;}
+        &.store-cargo{
+            .ems-cart-summary .ems-delivery-tab.ems-cargo-tab{display: none !important;}
+        }
     }
 }
 .ems-page-cart-step1 {
