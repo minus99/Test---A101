@@ -1050,6 +1050,74 @@ body.guest-checkout-layout{
     margin: 0 auto;
     width: 100%;
     position: relative;
+
+    /* Magazadan al */
+    .ems-brand-selection{
+        background: #fff;
+        &-select{
+            .emos_invisible{
+                display: block !important;
+                padding: 20px 0 20px 0;
+                margin-left: 20px;
+                margin-right: 20px;
+                border-bottom: 1px solid #f3f5f9;
+                > a{
+                    display: inline-block;
+                    background: $btnColor;
+                    padding: 10px;
+                    color: #fff;
+                    span{
+                        font-family: $medium;
+                        font-size: 16px;
+                    }
+                    &:first-child{margin-right: 20px;}
+                    &:hover{
+                        background: $btnAlternateColor;
+                    }
+                }
+            }
+        }
+        &-list{
+            .magazadanTeslimServis {
+                > .servisListeFiltreContainer.emos_invisible{
+                    display:flex !important;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    padding: 20px;
+                    width: 100%;
+                    > div{
+                        &:empty{display: none;}
+                        width: 25%;
+                        margin-left: 20px;
+                        .sStylerMainWrp.sStylerWrp_select .sStylerWrp{
+                            line-height: 28px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        &:first-child{margin-left: 0;}
+                    }
+                }
+                .magazadanTeslimListe{
+                    padding: 0 20px 20px 20px;
+                    .sStylerMainWrp.sStylerWrp_select .sStylerWrp{
+                        width: auto;
+                        line-height: 28px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                    &:empty{display: none;}
+                }
+                .magazaAdres{
+                    &:empty{display: none;}
+                    padding:20px;
+                    margin-bottom: 20px;
+                    border-top:1px solid #f3f5f9;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
     .ems-grid-address {
         display: inline-block;
         width: 100%; 
@@ -2384,6 +2452,58 @@ body.guest-checkout-layout{
     .ems-page-order-delivery {
         .page-top-title {
             span{ padding-left:20px; }
+        }
+        /* Magazadan al */
+        .ems-brand-selection{
+            &-select{
+                .emos_invisible{
+                    display: flex !important;
+                    justify-content: space-between;
+                    > a{
+                        &:first-child{margin-right: 0;}
+                        &:hover{
+                            background: $btnColor;
+                        }
+                    }
+                }
+            }
+            &-list{
+                .magazadanTeslimServis {
+                    > .servisListeFiltreContainer.emos_invisible{
+                        display:flex !important;
+                        flex-direction: column;
+                        padding: 20px;
+                        width: 100%;
+                        > div{
+                            &:empty{display: none;}
+                            width: 100%;
+                            margin-left: 0;
+                            margin-bottom: 20px;
+                            &.dvServisListeleBtn{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    .magazadanTeslimListe{
+                        padding: 0 20px 20px 20px;
+                        .sStylerMainWrp.sStylerWrp_select .sStylerWrp{
+                            width: auto;
+                            line-height: 28px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        &:empty{display: none;}
+                    }
+                    .magazaAdres{
+                        &:empty{display: none;}
+                        padding:20px;
+                        margin-bottom: 20px;
+                        border-top:1px solid #f3f5f9;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                    }
+                }
+            }
         }
         .ems-grid-address {
             padding: 0 20px;
