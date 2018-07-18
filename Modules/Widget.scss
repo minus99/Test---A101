@@ -14,8 +14,9 @@
             display: none;
         }
     }
-    .swiper-button-prev, .swiper-button-next{
-        margin-top: 20px;
+    .swiper-button-prev,
+    .swiper-button-next{
+        margin-top: -25px;
     }
     &.widget-new-shoes, &.widget-clothing {
         .swiper-inner {

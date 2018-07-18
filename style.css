@@ -14726,8 +14726,9 @@ body.search-ready .mod-mini-search-body {
   .widget-free-mode .swiper-button-next,
   .widget-free-mode .swiper-pagination {
     display: none; }
-  .widget .swiper-button-prev, .widget .swiper-button-next {
-    margin-top: 20px; }
+  .widget .swiper-button-prev,
+  .widget .swiper-button-next {
+    margin-top: -25px; }
   .widget.widget-new-shoes .swiper-inner, .widget.widget-clothing .swiper-inner {
     overflow: hidden !important;
     position: relative; }
