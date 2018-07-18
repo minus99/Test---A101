@@ -6760,6 +6760,8 @@ button.swiper-pagination-bullet {
     display: none; }
   .ems-page-cart-step1.store-cargo .ems-cart-summary .ems-delivery-tab.ems-cargo-tab {
     display: none !important; }
+  .ems-page-cart-step1.ems-page-adress-none .ems-brand-selection {
+    display: none; }
 
 .ems-page-cart-step1 .ems-page-cart-wrapper {
   padding-top: 80px;
