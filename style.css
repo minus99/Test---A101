@@ -9423,8 +9423,12 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         margin-top: 20px;
         text-align: center; }
   .site-footer .test {
-    width: 100%;
-    margin-top: 30px; }
+    width: 100%; }
+    .site-footer .test .footer-explanation {
+      margin-top: 30px; }
+      .site-footer .test .footer-explanation span.showLess, .site-footer .test .footer-explanation span.showMore {
+        cursor: pointer;
+        color: #10aac1; }
   .site-footer-menu > ul {
     width: 33.333%;
     max-width: 160px;
@@ -13529,7 +13533,18 @@ ul.emosInfinite .ems-prd {
       border-color: #10aac1; }
   ul.emosInfinite .ems-prd-mask {
     position: relative;
-    padding: 20px; }
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    flex-direction: column-reverse; }
   ul.emosInfinite .ems-prd-image {
     overflow: hidden; }
     ul.emosInfinite .ems-prd-image > a {
@@ -13543,7 +13558,18 @@ ul.emosInfinite .ems-prd {
   ul.emosInfinite .ems-prd-content {
     height: 110px;
     max-height: 110px;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    flex-direction: column-reverse; }
   ul.emosInfinite .ems-prd-name {
     max-height: 46px;
     overflow: hidden;
