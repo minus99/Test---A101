@@ -10834,6 +10834,8 @@ body.ems-signup-body .ems-page-default-member-login .ems-signup {
 
 .ems-page-member {
   padding-top: 40px; }
+  .ems-page-member .ems-brand-selection {
+    display: none; }
   .ems-page-member .kutuMesaj {
     border-bottom: solid 2px #f3f5f9;
     margin-top: 20px;
