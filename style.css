@@ -8312,6 +8312,11 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
       background: #fff;
       padding: 20px 30px;
       width: 50%; }
+      @media screen and (min-width: 850px) {
+        .ems-page-order-payment .ems-cart-pay-adress .left, .ems-page-order-payment .ems-cart-pay-adress .right {
+          min-height: 175px;
+          max-height: 175px;
+          overflow: hidden; } }
     .ems-page-order-payment .ems-cart-pay-adress .left {
       margin-right: 10px; }
     .ems-page-order-payment .ems-cart-pay-adress .right {
@@ -11048,7 +11053,7 @@ body.ems-signup-body .ems-page-default-member-login .ems-signup {
         display: block; }
 
 @media (min-width: 850px) {
-  .ems-login .ems-col-full .navigasyon {
+  .ems-login .ems-page-corporate .ems-col-full .navigasyon {
     padding: 0;
     margin-top: -10px;
     padding-left: 30px; } }
