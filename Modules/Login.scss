@@ -128,7 +128,7 @@
             }
         }
     }
-    .ems-signup{
+    .ems-login{
         display: none;
         .ems-login-tab{
             > span{
@@ -141,10 +141,10 @@
 body.ems-signup-body{
     .ems-page-default{
         &-member-login{
-            .ems-login{
+            .ems-signup{
                 display: none;
             }
-            .ems-signup{
+            .ems-login{
                 display: block;
             }
         }
