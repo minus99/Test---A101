@@ -15,7 +15,11 @@
                         top: 8px;
                     }
                 }
-                &-remember{ display: none; }
+                &-remember{
+                    .ems-form-obj{
+                        margin-bottom: 15px;
+                    }
+                }
                 &-checkout{
                     display: block;
                     .ems-form-obj{
