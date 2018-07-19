@@ -7311,7 +7311,7 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-price-total font.netFiyatVrg, .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-price-total font.topFiyatVrg {
             display: inline-block !important; }
           .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-price-total font.topFiyatVrg {
-            padding-right: 5px; }
+            padding-right: 15px; }
           .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-price-total font.brFiyatVrg, .cart-section-left .ems-grid-default .ems-grid-row .ems-grid-price-total font.topFiyatVrg {
             line-height: 1;
             font-family: "bold";
@@ -11773,6 +11773,16 @@ body.mini-cart-ready .vailCart {
       text-decoration: underline; }
     .mod-mini-login-body .sub .ems-form-inner .ems-field #lnkSifremiUnuttum:hover {
       color: #10aac1; }
+  .mod-mini-login-body .sub .ems-form-inner .ems-field-double > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%; }
+    .mod-mini-login-body .sub .ems-form-inner .ems-field-double > div:first-child {
+      text-align: left; }
+    .mod-mini-login-body .sub .ems-form-inner .ems-field-double > div:last-child {
+      text-align: right; }
+      .mod-mini-login-body .sub .ems-form-inner .ems-field-double > div:last-child label {
+        vertical-align: middle; }
   .mod-mini-login-body .sub .ems-form-inner .ems-field-submit a.btnKutuLogin {
     background: #10aac1; }
   .mod-mini-login-body .sub .ems-form-inner .ems-field-free {
@@ -13784,7 +13794,8 @@ ul.emosInfinite .ems-prd {
       flex-direction: column;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      position: relative; }
     ul.emosInfinite .ems-prd-price-btns {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;

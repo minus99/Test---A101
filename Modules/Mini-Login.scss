@@ -75,6 +75,18 @@
                                 color:$btnAlternateColor;
                             }
                         }
+                        &-double{
+                            > div{
+                                display: inline-block;
+                                vertical-align: top;
+                                width: 50%;
+                                &:first-child{text-align:left;}
+                                &:last-child{
+                                    text-align:right;
+                                    label{vertical-align: middle;}
+                                }
+                            }
+                        }
                         &-submit{
                             a.btnKutuLogin{
                                 background: $btnAlternateColor;
