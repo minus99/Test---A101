@@ -188,12 +188,11 @@
     }
     .order-cancel {
         .text{
+            text-align: right;
+            &:empty{display: none;}
             .btnDefault{
-                text-transform: inherit;
                 width: auto;
-                background: none;
-                padding:10px 0 10px 0;
-                color: $redColor;
+                padding:15px;
                 margin-top: 10px;
             }
         }
@@ -206,7 +205,7 @@
             max-width: 250px;
         }
     }
-    .dvTumunuIptalEtBox {
+    .dvTumunuIptalEtBox, .tumunuIptalEtContainer {
         .dvTumunuIptalSfiSprBox, .dvTumunuIptalBtn{
             width: 45%;
             display: inline-block;
@@ -230,7 +229,12 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
-        span[id$="lbfSIP_IPTALBASLIK"]{display:none;}
+        span[id$="lbfSIP_IPTALBASLIK"]{
+            .ems-message-error{
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+        }
         .ems-message{
             &-success{
                 margin-bottom: 20px;
