@@ -88,6 +88,7 @@
                     text-align: left;
                     font-family: $regular;
                     padding-right: 5px;
+                    &:empty{display: none; }
                 }
                 .value {
                     width: 45%;
@@ -96,6 +97,7 @@
                     font-family: $regular;
                     font-size: 15px;
                     text-align: right;
+                    &:empty{display: none; }
                 }
                 &.member-point, &.bank-point{ display: none; }
                 &.total {
