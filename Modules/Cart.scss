@@ -1036,10 +1036,16 @@ body.guest-checkout-layout{
     .ems-brand-selection{
         background: #fff;
         &-select{
+
+            .srv-kod-dsc{
+                width: 100%;
+                display: block;
+            }
+            
             .magazadanTeslim.emos_invisible {
                 display: block !important;
                 .magazadanteslim-head {
-                width: 30%;
+                width: 40%;
                 float: left;
                 margin-right: 10px;
                 text-align: right;
@@ -1048,9 +1054,10 @@ body.guest-checkout-layout{
                 .magazadanteslim-header img { float: left; }
                 .magazadanteslim-header p {
                     font-size: 22px;
+                    line-height: 29px;
                 }
                 .magazadanteslimcontent {
-                    width: 80%;
+                    width: 55%;
                     margin: 0 auto;
                 }
                 .magazadanteslimcontent p {
@@ -1058,6 +1065,8 @@ body.guest-checkout-layout{
                 }
                 .magazadanteslimuyari {
                     color: #12ABC2;
+                    text-align: center;
+                    font-weight: bold;
                 }
                 display: flex !important;
                 justify-content: space-between;
@@ -1149,6 +1158,8 @@ body.guest-checkout-layout{
                                 margin-top: 10px;
                                 font-family: $medium;
                                 font-size: 14px;
+                                border-bottom: 1px solid lightgray;
+                                padding-bottom: 10px;
                                 &:first-child{margin-top: 0;}
                                 > span{
                                     display: block;
@@ -2922,6 +2933,9 @@ body.guest-checkout-layout{
 
 }
 
+.srv-kod-dsc{
+    display: none;
+}
 
 
 /**/

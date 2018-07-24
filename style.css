@@ -7600,6 +7600,9 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
   /* Teslimat Toplam Bilgi */ }
   .ems-page-order-delivery .ems-brand-selection {
     background: #fff; }
+    .ems-page-order-delivery .ems-brand-selection-select .srv-kod-dsc {
+      width: 100%;
+      display: block; }
     .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible {
       display: block !important;
       display: -webkit-box !important;
@@ -7609,7 +7612,7 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
       -ms-flex-pack: justify;
       justify-content: space-between; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-head {
-        width: 30%;
+        width: 40%;
         float: left;
         margin-right: 10px;
         text-align: right; }
@@ -7618,14 +7621,17 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-header img {
         float: left; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-header p {
-        font-size: 22px; }
+        font-size: 22px;
+        line-height: 29px; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimcontent {
-        width: 80%;
+        width: 55%;
         margin: 0 auto; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimcontent p {
         font-size: 14px; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimuyari {
-        color: #12ABC2; }
+        color: #12ABC2;
+        text-align: center;
+        font-weight: bold; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible a {
         display: none !important; }
         .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible a:first-child {
@@ -7714,7 +7720,9 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li {
             margin-top: 10px;
             font-family: "medium";
-            font-size: 14px; }
+            font-size: 14px;
+            border-bottom: 1px solid lightgray;
+            padding-bottom: 10px; }
             .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li:first-child {
               margin-top: 0; }
             .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li > span {
@@ -9145,6 +9153,9 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
       font-size: 16px; }
     .pageSiparisSonuc .sonucTitle {
       font-size: 25px; } }
+
+.srv-kod-dsc {
+  display: none; }
 
 /**/
 .ems-cart-summary .ems-delivery-tab.ems-cargo-tab {
