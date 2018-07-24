@@ -288,13 +288,6 @@
                 }
             }
         }
-        &.btnDisable {
-            i {
-                &:before {
-                    
-                }
-            }
-        }
     }
 }
 
@@ -477,7 +470,7 @@ body.guest-checkout-layout{
                 }
             }
             .ems-grid-name {
-                width: 30%;
+                width: 20%;
                 span {
                     text-align: left;
                     display: inline-block;
@@ -485,15 +478,14 @@ body.guest-checkout-layout{
                 }
             }
             .ems-grid-piece {
-                width: 22%;
+                width: 25%;
             }
             .ems-grid-price {
-                width: 15%;
+                width: 22%;
                 text-align: center;
-                display: none;
             }
             .ems-grid-price-total {
-                width: 30%;
+                width: 22%;
                 text-align: center;
             }
             .ems-grid-delete {
@@ -528,8 +520,8 @@ body.guest-checkout-layout{
                 }
             }
             .ems-grid-name {
-                padding: 0 15px;
-                width: 30%;
+                padding: 0 0 0 15px;
+                width: 20%;
                 span {
                     font-size: 13px;
                     font-family: $regular;
@@ -620,14 +612,12 @@ body.guest-checkout-layout{
                 }
             }
             .ems-grid-price {
-                display: none;
-                width: 15%; 
+                width: 22%; 
                 text-align: center;
             }
-            .ems-grid-price-total {
-                width: 29%; 
+            .ems-grid-price-total, .ems-grid-price {
+                width: 22%; 
                 white-space: nowrap;
-                text-align: right;
                 &-inner{
                     @include flex();
                     @include flexDirection(row);
@@ -662,26 +652,15 @@ body.guest-checkout-layout{
                 span[id$="lblURN_NETTOPLAMFIYAT"]{
                     text-decoration: inherit !important;
                     position: relative;
-                    /*&:after{
-                        content: '';
-                        width: 100%;
-                        height: 2px;
-                        position: absolute;
-                        top: 50%;
-                        right: 0;
-                        background: #b3b3b3;
-                        @include setTransform(rotate(-10deg));
-                        margin-top: -1px;
-                    }*/
                 }
                 font {
                     text-align: center;
                     display: none;
                     font-size: 18px;
-                    &.brFiyat, &.topFiyat, &.satBrFiyat, &.satBrFiyatVrg, &.satBrFiyat, &.netFiyat{
+                    &.netFiyat{
                         display: none !important;
                     }
-                    &.netFiyatVrg{
+                    &.netFiyatVrg, &.satBrFiyat{
                         display: inline-block !important;
                         line-height: 1;
                         font-size: 25px;
@@ -710,7 +689,7 @@ body.guest-checkout-layout{
                     &.topFiyatVrg{
                         padding-right: 15px;
                     }
-                    &.brFiyatVrg, &.topFiyatVrg{  
+                    &.brFiyat{
                         line-height: 1;
                         font-family: $bold;
                         font-size: 16px;
@@ -722,10 +701,6 @@ body.guest-checkout-layout{
                             font-size: 13px;
                             color: #b3b3b3;
                             display: inline-block;
-                            float: left;
-                            position: relative;
-                            top: 3px;
-                            margin-right: 2px;
                         }
                         .d{
                             vertical-align: top;
@@ -1929,14 +1904,14 @@ body.guest-checkout-layout{
             }
         }
         .tableTitleDefault {display: none;}
-        table {
+        /*table {
             width: 100%;
             tbody{
-                tr{
+                tr {
                     display: table;
                     table-layout: fixed;
                     width: 100%;
-                    th, td{
+                    > th, > td{
                         display: table-cell;
                         vertical-align: middle;
                         text-align: center;
@@ -1958,14 +1933,13 @@ body.guest-checkout-layout{
                     }
                 }
             }
-        }
-        table.text-metin{
+        }*/
+        /*table.text-metin{
             tbody{
                 tr td{ width: 50% !important; text-align: left; }
                 tr td:first-child{font-family:'medium';}
             }
-        }
-        
+        }*/
         .onBilgilendirmeFormMetin{
             margin-top: 30px;
         }
@@ -2458,6 +2432,7 @@ body.guest-checkout-layout{
                         }
                     }
                 }
+                .ems-grid-price{display: none;}
                 .ems-grid-piece {
                     width: auto;
                     margin-top: 10px;
