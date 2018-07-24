@@ -7604,13 +7604,7 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
       width: 100%;
       display: block; }
     .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible {
-      display: block !important;
-      display: -webkit-box !important;
-      display: -ms-flexbox !important;
-      display: flex !important;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; }
+      padding-top: 20px; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-head {
         width: 40%;
         float: left;
@@ -7718,11 +7712,14 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           border-width: 0px 2px 2px 2px;
           display: none; }
           .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li {
-            margin-top: 10px;
+            padding-top: 10px;
+            padding-left: 5px;
             font-family: "medium";
             font-size: 14px;
             border-bottom: 1px solid lightgray;
             padding-bottom: 10px; }
+            .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li:hover {
+              background-color: #ddd; }
             .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li:first-child {
               margin-top: 0; }
             .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li > span {
@@ -8807,6 +8804,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
     /* Magazadan al */ }
     .ems-page-order-delivery .page-top-title span {
       padding-left: 20px; }
+    .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-head {
+      width: 20%; }
     .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis > .servisListeFiltreContainer.emos_invisible {
       display: -webkit-box !important;
       display: -ms-flexbox !important;

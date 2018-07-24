@@ -1043,7 +1043,7 @@ body.guest-checkout-layout{
             }
             
             .magazadanTeslim.emos_invisible {
-                display: block !important;
+                padding-top:20px;
                 .magazadanteslim-head {
                 width: 40%;
                 float: left;
@@ -1068,8 +1068,6 @@ body.guest-checkout-layout{
                     text-align: center;
                     font-weight: bold;
                 }
-                display: flex !important;
-                justify-content: space-between;
                 a{
                     display: none !important;
                     &:first-child{margin-right: 0;}
@@ -1155,11 +1153,15 @@ body.guest-checkout-layout{
                             border-width: 0px 2px 2px 2px;
                             display: none;
                             > li{
-                                margin-top: 10px;
+                                padding-top: 10px;
+                                padding-left: 5px;
                                 font-family: $medium;
                                 font-size: 14px;
                                 border-bottom: 1px solid lightgray;
                                 padding-bottom: 10px;
+                                &:hover{
+                                    background-color: #ddd;
+                                }
                                 &:first-child{margin-top: 0;}
                                 > span{
                                     display: block;
@@ -2530,6 +2532,12 @@ body.guest-checkout-layout{
         }
         /* Magazadan al */
         .ems-brand-selection{
+            &-select{
+             
+                .magazadanTeslim.emos_invisible {
+                    .magazadanteslim-head { width: 20%;}
+                }
+            }
             &-list{
                 .magazadanTeslimServis {
                     > .servisListeFiltreContainer.emos_invisible{
