@@ -7618,26 +7618,38 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
   /* Teslimat Toplam Bilgi */ }
   .ems-page-order-delivery .ems-brand-selection {
     background: #fff; }
-    .ems-page-order-delivery .ems-brand-selection-select .emos_invisible {
+    .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible {
       display: block !important;
-      padding: 20px 0 20px 0;
-      margin-left: 20px;
-      margin-right: 20px;
-      border-bottom: 1px solid #f3f5f9; }
-      .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a {
-        display: inline-block;
-        background: #07639e;
-        padding: 10px;
-        color: #fff; }
-        .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a span {
-          font-family: "medium";
-          font-size: 16px; }
-        .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a:first-child {
-          margin-right: 20px; }
-        .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a:hover {
-          background: #10aac1; }
-        .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a.selected {
-          background: #10aac1; }
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-head {
+        width: 30%;
+        float: left;
+        margin-right: 10px;
+        text-align: right; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-header {
+        text-align: left; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-header img {
+        float: left; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslim-header p {
+        font-size: 22px; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimcontent {
+        width: 80%;
+        margin: 0 auto; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimcontent p {
+        font-size: 14px; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimuyari {
+        color: #12ABC2; }
+      .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible a {
+        display: none !important; }
+        .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible a:first-child {
+          margin-right: 0; }
+        .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible a:hover {
+          background: #07639e; }
     .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis > .servisListeFiltreContainer.emos_invisible {
       display: -webkit-box !important;
       display: -ms-flexbox !important;
@@ -8790,17 +8802,6 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
     /* Magazadan al */ }
     .ems-page-order-delivery .page-top-title span {
       padding-left: 20px; }
-    .ems-page-order-delivery .ems-brand-selection-select .emos_invisible {
-      display: -webkit-box !important;
-      display: -ms-flexbox !important;
-      display: flex !important;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; }
-      .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a:first-child {
-        margin-right: 0; }
-      .ems-page-order-delivery .ems-brand-selection-select .emos_invisible > a:hover {
-        background: #07639e; }
     .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis > .servisListeFiltreContainer.emos_invisible {
       display: -webkit-box !important;
       display: -ms-flexbox !important;
