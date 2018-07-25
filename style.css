@@ -7599,7 +7599,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
   /* Kargo Bilgilerim ve Not */
   /* Teslimat Toplam Bilgi */ }
   .ems-page-order-delivery .ems-brand-selection {
-    background: #fff; }
+    background: #fff;
+    margin-bottom: 20px; }
     .ems-page-order-delivery .ems-brand-selection-select .srv-kod-dsc {
       width: 100%;
       display: block; }
@@ -7717,7 +7718,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
             font-family: "medium";
             font-size: 14px;
             border-bottom: 1px solid lightgray;
-            padding-bottom: 10px; }
+            padding-bottom: 10px;
+            cursor: pointer; }
             .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li:hover {
               background-color: #ddd; }
             .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown > ul > li:first-child {

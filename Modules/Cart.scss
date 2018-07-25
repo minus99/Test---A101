@@ -1035,6 +1035,7 @@ body.guest-checkout-layout{
     /* Magazadan al */
     .ems-brand-selection{
         background: #fff;
+        margin-bottom: 20px;
         &-select{
 
             .srv-kod-dsc{
@@ -1159,6 +1160,7 @@ body.guest-checkout-layout{
                                 font-size: 14px;
                                 border-bottom: 1px solid lightgray;
                                 padding-bottom: 10px;
+                                cursor: pointer;
                                 &:hover{
                                     background-color: #ddd;
                                 }
@@ -2401,6 +2403,7 @@ body.guest-checkout-layout{
         
     .ems-container-basket{
         background: #fff;
+        
     }
 
     .cart-section-left {
