@@ -90,7 +90,8 @@
     > ul{
         width: 100%;
         @include flex();
-        justify-content: space-between;
+        /*justify-content: space-between;*/
+        justify-content: space-evenly;
         align-items: center;
         > li{
             display: inline-block;
@@ -262,6 +263,13 @@ body.ems-logoff{
                     > a{
                         text-transform: uppercase;
                         max-height: 88px;
+                        min-height: 88px;
+                        display: table;
+                        width: 100%;
+                        > span{
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
                     }
                     &.sub-menu{
                         ul.sub-nav{
@@ -416,6 +424,7 @@ body.ems-logoff{
                                                         font-size: 20px;
                                                         z-index: 2;
                                                         width:70%;
+                                                        text-transform: uppercase;
                                                     }
                                                 }
                                             }
@@ -691,6 +700,7 @@ body.ems-logoff{
             }
         }
     }
+    .nav-main ul li a{ transition: none; }
 
     .nav-main{
         width: 100%;
@@ -702,14 +712,34 @@ body.ems-logoff{
         > ul{
             display: block;
             justify-content: inherit;
+            padding-top: 10px;
+            padding-bottom: 10px;
             > li{
                 display: block;
                 > a{
                     text-align: left;
                     font-size: 16px;
-                    padding: 15px 20px 15px 20px;
+                    padding: 17px 40px 16px 20px;
                     &:after{
                         display: none;
+                    }
+                    &:before{
+                        font-family: 'icomoon';
+                        content:'\e903';
+                        position: absolute;
+                        top: 50%;
+                        background: none;
+                        right: 20px;
+                        width: 15px;
+                        height: 15px;
+                        color: #d8d8d8;
+                        font-size: 15px;
+                        margin-top: -7px;
+                    }
+                }
+                &.sub-menu-ozel{
+                    > a{
+                        &:after{ color: #d8d8d8; }
                     }
                 }
                 &.sub-menu{
@@ -720,30 +750,173 @@ body.ems-logoff{
                                     a{
                                         font-family: $medium;
                                         font-size: 14px;
-                                        padding: 15px 5px;
+                                        padding: 17px 30px 17px 30px;
                                         display: block;
                                         border-top: 1px solid #f3f5f9;
+                                        position: relative;
                                         .cover{display: none;}
+                                    }
+                                    &:first-child{
+                                        a{border-top:none;}
                                     }
                                 }
                             }
                         }
                     }
                 }
-                ul.sub-nav{
+                > ul.sub-nav{
                     display: none;
+                    > li {
+                        > ul{
+                            > li {
+                                > ul{
+                                    display: none;
+                                }
+                            }
+                        }
+                        > ul{
+                            > li {
+                                &.selected{
+                                    > ul{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 &.selected{
-                    ul.sub-nav{
+                    > ul.sub-nav{
                         display: block;
                     }   
+                }
+                &.sub-menu.market{
+                    > ul.sub-nav{
+                        > li{
+                            &:last-child{
+                                > ul > li{
+                                    > a{
+                                        border-top: 1px solid #f3f5f9;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.sub-menu.elektronik {
+                    > ul.sub-nav{
+                        > li{
+                            > ul{
+                                > li{
+                                    > a{
+                                        &:before{
+                                            font-family: 'icomoon';
+                                            content:'\e903';
+                                            position: absolute;
+                                            top: 50%;
+                                            background: none;
+                                            right: 20px;
+                                            width: 15px;
+                                            height: 15px;
+                                            color: #d8d8d8;
+                                            font-size: 15px;
+                                            margin-top: -7px;
+                                        }
+                                    }
+                                    &:first-child, &.selected{
+                                        > a{border-top:none;}
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                display: none;
+                                > ul {
+                                    > li:first-child{
+                                        > a{
+                                            border-top: 1px solid #f3f5f9;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.sub-menu.ev-yasam {
+                    > ul.sub-nav{
+                        > li.sub-menu{
+                            > a{
+                                font-family: $medium;
+                                font-size: 14px;
+                                padding: 18px 30px 17px 30px;
+                                display: block;
+                                position: relative;
+                                border-top: 1px solid #f3f5f9;
+                                &:before{
+                                    font-family: 'icomoon';
+                                    content:'\e903';
+                                    position: absolute;
+                                    top: 50%;
+                                    background: none;
+                                    right: 20px;
+                                    width: 15px;
+                                    height: 15px;
+                                    color: #d8d8d8;
+                                    font-size: 15px;
+                                    margin-top: -7px;
+                                }
+                            }
+                            &:first-child{
+                                > a{
+                                    border-top: none;
+                                }
+                            }
+                            > ul{
+                                display: none;
+                            }
+                            &.selected{
+                                > a{
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    background: #0e9eb4;
+                                    z-index: 1;
+                                    color: #fff;
+                                    border-top: none;
+                                    padding-left: 40px;
+                                    padding-right: 40px;
+                                    text-align: center;
+                                    &:after{
+                                        display: none;
+                                    }
+                                    &:before{
+                                        font-family: 'icomoon';
+                                        content:'\e901';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 15px;
+                                        background: none;
+                                        width: 15px;
+                                        height: 15px;
+                                        color: #d8d8d8;
+                                        font-size: 15px;
+                                        margin-top: -7px;
+                                    }
+                                }
+                                > ul{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-
-    nav[data-level="1"]{
+    nav[data-level="1"], nav[data-level="2"], nav[data-level="3"]{
         height: calc(100% - 50px);
+    }
+    nav[data-level="1"]{
         > ul {
             > li{
                 &.sub-menu.selected{
@@ -755,6 +928,75 @@ body.ems-logoff{
                         background: #0e9eb4;
                         z-index: 1;
                         color: #fff;
+                        border-top: none;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        text-align: center;
+                        &:after{
+                            display: none;
+                        }
+                        &:before{
+                            font-family: 'icomoon';
+                            content:'\e901';
+                            position: absolute;
+                            top: 50%;
+                            left: 15px;
+                            background: none;
+                            width: 15px;
+                            height: 15px;
+                            color: #d8d8d8;
+                            font-size: 15px;
+                            margin-top: -7px;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+    nav[data-level="2"]{
+        > ul {
+            > li{
+                &.sub-menu.selected{
+                    > a { display: none; }
+                    > ul{
+                        > li{
+                            > ul{
+                                > li{
+                                    &.selected{
+                                        > a{
+                                            position: fixed;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            background: #0e9eb4;
+                                            z-index: 1;
+                                            color: #fff;
+                                            border-top: none;
+                                            padding-left: 40px;
+                                            padding-right: 40px;
+                                            text-align: center;
+                                            &:after{
+                                                display: none;
+                                            }
+                                            &:before{
+                                                font-family: 'icomoon';
+                                                content:'\e901';
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 15px;
+                                                background: none;
+                                                width: 15px;
+                                                height: 15px;
+                                                color: #d8d8d8;
+                                                font-size: 15px;
+                                                margin-top: -7px;
+                                            }
+                                        }   
+                                    }
+                                }
+                                
+                            }
+                        }
                     }   
                 }
             }

@@ -13,9 +13,12 @@
             .ems-container-margin{margin-bottom:30px;}
             .ems-container.order-2 .ems-prd-list{padding-bottom:25px;}
             .anasayfa-single-slider{max-width: 1300px;}
+            .anasayfa-single-slider:empty{display: none;}
             .container.kurban .head .head-img{padding-top: 10px; padding-bottom: 0;}
+            #ajxUrunList .emosInfinite {padding-bottom:30px}
         }
-    }    
+    }   
+
 }
 
 .ems-container {

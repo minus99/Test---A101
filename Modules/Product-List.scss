@@ -110,6 +110,9 @@
             padding-top: 10px;
         }
     }
+    .ems-container-reset.ems-container-widget-wrapper{
+        padding: 0;
+    }
 }
 
 body.error-page-layout{
@@ -368,7 +371,7 @@ ul.emosInfinite {
     .ems-prd {
         padding: 10px;
         min-height: 100px;
-        width: 33.333%;
+        width: 25%;
         &-inner{
             border: solid 2px $border;
             position: relative;
@@ -889,6 +892,11 @@ body.filter-popup-ready{
     body.product-list-layout.filter-popup-ready{
         .ems-page-list .ems-col-left{position: relative; z-index: 20; background: #f3f5f9;}
     }
+    .ems-page{
+        &-listsearch{
+            padding-top: 50px;
+        }
+    }
 }
 
 @media screen and (max-width: $breakpointXSM){
@@ -896,7 +904,8 @@ body.filter-popup-ready{
         .ems-pay-info{
             display: none;
         }
-        .urunNavigasyon{
+        .footer-explanation{margin-top: 0;}
+        /*.urunNavigasyon{
             background: #0e9eb4;
             padding-top: 0;
             padding-bottom: 0;
@@ -910,7 +919,7 @@ body.filter-popup-ready{
                     width: auto;
                 }
             }
-        }
+        }*/
         .ems-container{
             padding-left: 0;
             padding-right: 0;
@@ -968,18 +977,15 @@ body.filter-popup-ready{
             }
         }
         .ems-col-left{
+            position: fixed;
+            bottom: -100%;
+            width: 100%;
+            height: calc(100% - 50px);
+            z-index: 5;
+            background: #fff;
+            will-change: bottom;
+            @include transition(bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
             .ems-cell{ display: none; }
-            .ems-col-inner{
-                position: fixed;
-                width: 100%;
-                height: calc(100vh - 120px);
-                z-index: 20;
-                bottom: -100%;
-                left: 0;
-                background: #fff;
-                will-change: bottom;
-                @include transition(bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
-            }
         }
         .ems-container-right-reset{
             background: #fff;
@@ -1184,11 +1190,28 @@ body.filter-popup-ready{
                             span{display: none;}
                         }
                     }
+                    .urunListe_stokHaberci{
+                        .btnStokHaberci{
+                            &:after{
+                                font-family: 'icomoon';
+                                content:'\e918';
+                                font-size: 13px;
+                                color: #fff;
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                right: 0;
+                                margin-top: -6px;
+                            }
+                            span{display: none;}
+                        }
+                    }
                 }
             }
         }
     }
-    .uclu{
+
+    .uclu, .dortlu{
         ul.emosInfinite{
             .ems-prd{
                 width: 50%;
@@ -1210,20 +1233,8 @@ body.filter-popup-ready{
             &-list{
                 > div{
                      .ems-col{
-                         &-left{ left: 0; }
+                         &-left{ bottom: 0; }
                      }
-                }
-            }
-        }
-    }
-    body.filter-popup-ready{
-        .ems-page-list{
-            .ems-col-left{
-                .ems-col-inner{
-                    bottom: 0;
-                }
-                .kutuOzellikFiltre{
-                    max-height: calc(100% - 50px);
                 }
             }
         }
