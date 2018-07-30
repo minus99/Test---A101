@@ -1,5 +1,24 @@
 .kutuKategori{
-    .kutuHeaderKategori, .kutuFooterKategori{display: none;}
+    .kutuFooterKategori{display: none;}
+    .kutuHeaderKategori{
+        > span{ display: none; }
+        .ems-prd-list-discountFlg{
+            > span.checkbox{
+                width: 100%;
+                margin-right: 0;
+                display: table;
+                padding: 20px;
+                border-bottom: 2px solid #e8eaf1;
+                > span, > label{ display: table-cell; vertical-align: middle; }
+                > label{
+                    font-family: $medium;
+                    color:#07639e;
+                    font-size: 16px;
+                }
+            }
+            &:empty{display: none;}
+        }
+    }
     .menuKategori{
         padding:15px 10px;
         li {

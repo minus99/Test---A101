@@ -7655,7 +7655,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         line-height: 29px; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimcontent {
         width: 55%;
-        margin: 0 auto; }
+        margin: 0 auto;
+        text-align: center; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimcontent p {
         font-size: 14px; }
       .ems-page-order-delivery .ems-brand-selection-select .magazadanTeslim.emos_invisible .magazadanteslimuyari {
@@ -9235,7 +9236,27 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         font-family: "bold";
         margin: 3px 0 18px; }
 
-.kutuKategori .kutuHeaderKategori, .kutuKategori .kutuFooterKategori {
+.kutuKategori .kutuFooterKategori {
+  display: none; }
+
+.kutuKategori .kutuHeaderKategori > span {
+  display: none; }
+
+.kutuKategori .kutuHeaderKategori .ems-prd-list-discountFlg > span.checkbox {
+  width: 100%;
+  margin-right: 0;
+  display: table;
+  padding: 20px;
+  border-bottom: 2px solid #e8eaf1; }
+  .kutuKategori .kutuHeaderKategori .ems-prd-list-discountFlg > span.checkbox > span, .kutuKategori .kutuHeaderKategori .ems-prd-list-discountFlg > span.checkbox > label {
+    display: table-cell;
+    vertical-align: middle; }
+  .kutuKategori .kutuHeaderKategori .ems-prd-list-discountFlg > span.checkbox > label {
+    font-family: "medium";
+    color: #07639e;
+    font-size: 16px; }
+
+.kutuKategori .kutuHeaderKategori .ems-prd-list-discountFlg:empty {
   display: none; }
 
 .kutuKategori .menuKategori {
@@ -11407,16 +11428,16 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
 .ems-page-default .ems-login .ems-login-tab > span {
   margin-right: 20px; }
 
-.ems-page-default .ems-login {
+.ems-page-default .ems-signup {
   display: none; }
-  .ems-page-default .ems-login .ems-login-tab > span {
+  .ems-page-default .ems-signup .ems-login-tab > span {
     margin-left: 20px; }
 
 body.ems-signup-body .ems-page-default-member-login .ems-signup {
-  display: none; }
+  display: block; }
 
 body.ems-signup-body .ems-page-default-member-login .ems-login {
-  display: block; }
+  display: none; }
 
 .ems-login-box .ems-message {
   margin-bottom: 20px; }
