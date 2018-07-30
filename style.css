@@ -11605,14 +11605,10 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
         padding: 16px 20px; }
 
 .ems-page-corporate .ems-col-full .navigasyon {
-  padding: 0 20px;
-  margin-bottom: -10px;
-  margin-top: 10px; }
+  padding: 0 30px; }
   @media (min-width: 850px) {
     .ems-page-corporate .ems-col-full .navigasyon {
-      padding: 0;
-      margin-bottom: 15px;
-      margin-top: -30px; } }
+      margin-bottom: 10px; } }
   .ems-page-corporate .ems-col-full .navigasyon > span > a {
     display: inline-block !important;
     vertical-align: middle;
@@ -11697,9 +11693,6 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
     margin-top: -10px;
     padding-left: 30px; } }
 
-.ems-logoff .pageMesajGonder .ems-page-default-info .ems-form-inner {
-  margin: 0 auto; }
-
 .pageMesajGonder {
   max-width: 890px;
   min-height: 375px;
@@ -11761,10 +11754,7 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
     .pageMesajGonder .ems-page-default-info .ems-form-inner .geneltelefon {
       width: 100% !important; }
     .pageMesajGonder .ems-page-default-info .ems-form-inner .button {
-      padding-top: 20px;
-      /*a {
-                    width: 50%;
-                }*/ }
+      padding-top: 20px; }
 
 .ems-logoff .pageMesajGonder {
   margin-left: auto;
@@ -11992,6 +11982,8 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
     margin-left: 0; }
     .ems-page-corporate .ems-col-full .ems-page-content .ems-page-content-title {
       display: none; }
+  .ems-page-corporate .ems-col-full .navigasyon {
+    display: none; }
   .pageMesajGonder {
     max-width: inherit;
     padding: 0;
