@@ -6045,6 +6045,8 @@ button.swiper-pagination-bullet {
 .ems-page-default-order-detail .order-address {
   border: 1px solid #f3f5f9;
   display: inline-block;
+  vertical-align: top;
+  min-height: 170px;
   width: 50%;
   padding: 30px;
   margin: 30px 0; }
@@ -11332,7 +11334,7 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
 
 .ems-page-default-member-login {
   max-width: 900px;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 30px auto;
   background: #fff;
   padding: 35px 30px; }
   .ems-page-default-member-login .ems-form-inner .ems-field .ems-form-label {
@@ -11466,6 +11468,7 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
   .ems-page-default-member-login {
     max-width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 20px; }
     .ems-page-default-member-login .ems-form-inner .ems-field .btnLogin {
       min-width: 140px; }
@@ -11473,7 +11476,8 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
       font-size: 12px; } }
 
 .ems-page-member {
-  padding-top: 40px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
   .ems-page-member .ems-brand-selection {
     display: none; }
   .ems-page-member .kutuMesaj {
@@ -11831,22 +11835,13 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
 .pageUyeSifreReset .pageDescUyeSifreReset {
   display: none; }
 
-.ems-logoff .ems-page-member .ems-col-left {
-  display: none; }
-
-.ems-logoff .ems-page-member .ems-col-full {
-  width: 100%; }
-
-.ems-logoff .ems-page-member .ems-page-content {
-  margin-left: 0;
-  max-width: 100%; }
-
-.ems-logoff .ems-page-member .ems-page-default {
-  margin-left: auto;
-  margin-right: auto; }
-
-.ems-logoff .pageSifremiUnuttum {
-  margin: 0 auto; }
+.ems-logoff {
+  /*.ems-page-member .ems-col-left{display:none;}
+    .ems-page-member .ems-col-full{width:100%;}
+    .ems-page-member .ems-page-content{margin-left: 0; max-width: 100%;}
+    .ems-page-member .ems-page-default{margin-left: auto; margin-right: auto;}*/ }
+  .ems-logoff .pageSifremiUnuttum {
+    margin: 0 auto; }
 
 .tableMesajGonder_mesajIcerik > div > table {
   max-width: 340px; }
@@ -11898,7 +11893,8 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
     overflow: hidden; }
   .ems-page-member {
     background: #fff;
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 0; }
     .ems-page-member .kutuMesaj {
       border-bottom: none;
       margin-bottom: 0; }

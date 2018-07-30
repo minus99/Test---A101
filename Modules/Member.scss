@@ -2,6 +2,7 @@
     &-member{
         .ems-brand-selection{display: none;}
         padding-top: 40px;
+        padding-bottom: 40px;
         .kutuMesaj{
             border-bottom: solid 2px #f3f5f9;
             margin-top: 20px;
@@ -510,10 +511,10 @@
 }
 
 .ems-logoff{
-    .ems-page-member .ems-col-left{display:none;}
+    /*.ems-page-member .ems-col-left{display:none;}
     .ems-page-member .ems-col-full{width:100%;}
     .ems-page-member .ems-page-content{margin-left: 0; max-width: 100%;}
-    .ems-page-member .ems-page-default{margin-left: auto; margin-right: auto;}
+    .ems-page-member .ems-page-default{margin-left: auto; margin-right: auto;}*/
     .pageSifremiUnuttum{
         margin: 0 auto;
     }
@@ -596,6 +597,7 @@
         &-member{
             background: #fff;
             padding-top: 0;
+            padding-bottom: 0;
             .kutuMesaj{
                 border-bottom: none;
                 margin-bottom: 0;

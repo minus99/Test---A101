@@ -1,7 +1,7 @@
 .ems-page-default{
     &-member-login{
         max-width: 900px;
-        margin:30px auto 0 auto;;
+        margin:30px auto 30px auto;;
         background: #fff;
         padding: 35px 30px;
         .ems-form-inner{
@@ -186,6 +186,7 @@ body.ems-signup-body{
         &-member-login{
             max-width: 100%;
             margin-top: 0;
+            margin-bottom: 0;
             padding: 20px;
             .ems-form-inner{
                 .ems-field{
