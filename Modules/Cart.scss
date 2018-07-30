@@ -2480,7 +2480,12 @@ body.guest-checkout-layout{
         .ems-cart-button{
             padding: 15px 10px;
             border-top: 2px solid $border;
-            display: none;
+            .ems-cart-btn.next{
+                text-align: right;
+                .ems-cart-btn-update{
+                    margin-right: 0px;
+                }
+            }
             .btnAlisverisDevam, .btnSepetGuncelle, .btnSepetBosalt {
                 margin-top: 0;
                 padding: 10px;

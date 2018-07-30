@@ -8806,8 +8806,11 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           padding: 10px; }
   .cart-section-left .ems-cart-button {
     padding: 15px 10px;
-    border-top: 2px solid #e8eaf1;
-    display: none; }
+    border-top: 2px solid #e8eaf1; }
+    .cart-section-left .ems-cart-button .ems-cart-btn.next {
+      text-align: right; }
+      .cart-section-left .ems-cart-button .ems-cart-btn.next .ems-cart-btn-update {
+        margin-right: 0px; }
     .cart-section-left .ems-cart-button .btnAlisverisDevam, .cart-section-left .ems-cart-button .btnSepetGuncelle, .cart-section-left .ems-cart-button .btnSepetBosalt {
       margin-top: 0;
       padding: 10px; }
@@ -11689,6 +11692,9 @@ body.ems-signup-body .ems-page-default-member-login .ems-login {
     padding: 0;
     margin-top: -10px;
     padding-left: 30px; } }
+
+.ems-logoff .pageMesajGonder .ems-page-default-info .ems-form-inner {
+  margin: 0 auto; }
 
 .pageMesajGonder {
   max-width: 890px;
