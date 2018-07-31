@@ -8588,6 +8588,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
     .ems-page-order-payment .pageDecOdemeBilgi span {
       font-size: 13px;
       color: #1e2432; }
+  .ems-page-order-payment .cart-section-left .ems-cart-btn.prev {
+    display: none; }
 
 /* Sipariş Sonuç */
 .pageSiparisSonuc {
