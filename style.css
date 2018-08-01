@@ -8903,7 +8903,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         width: 100%;
         padding: 20px 50px 20px 20px;
         border: 2px solid #e8eaf1;
-        margin-top: 20px; }
+        margin-top: 20px;
+        height: 190px; }
         .ems-page-order-delivery .ems-grid-address .ems-grid-row:first-child {
           margin-top: 10px; }
         .ems-page-order-delivery .ems-grid-address .ems-grid-row > div {
