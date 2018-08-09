@@ -7769,7 +7769,9 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown.opened > div {
           border-bottom-color: transparent; }
         .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe .drp-srv-kod.dropdown.opened > ul {
-          display: block; }
+          display: block;
+          max-height: 230px;
+          overflow-y: scroll; }
       .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazadanTeslimListe:empty {
         display: none; }
     .ems-page-order-delivery .ems-brand-selection-list .magazadanTeslimServis .magazaAdres {

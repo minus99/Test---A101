@@ -1177,7 +1177,9 @@ body.guest-checkout-layout{
                             > div {
                                 border-bottom-color: transparent; 
                             }
-                            > ul{ display: block; }
+                            > ul{ display: block;
+                                max-height: 230px;
+                                overflow-y: scroll; }
                         }
                     }
                     &:empty{display: none;}
