@@ -14769,107 +14769,111 @@ body.filter-popup-ready .vailFilter {
     z-index: 20;
     background: #f3f5f9; }
   .ems-page-listsearch {
-    padding-top: 50px; } }
+    padding-top: 50px; }
+  .ems-page-list.prd-list-s1 .ems-container .ems-col-left .ems-prd-list-discountFlg,
+  .ems-page-list.prd-list-s1 .ems-container .ems-container-right-reset .ems-container.ems-cell-1 {
+    display: none; } }
 
 @media screen and (max-width: 850px) {
-  .ems-page-list {
-    /*.urunNavigasyon{
-            background: #0e9eb4;
-            padding-top: 0;
-            padding-bottom: 0;
-            > span a{
-                color: #fff;
-                &:before{
-                    background: none;
-                    content:'>';
-                    color: #fff;
-                    height: auto;
-                    width: auto;
-                }
-            }
-        }*/ }
-    .ems-page-list .ems-pay-info {
-      display: none; }
-    .ems-page-list .footer-explanation {
-      margin-top: 0; }
-    .ems-page-list .ems-container {
-      padding-left: 0;
-      padding-right: 0;
-      max-width: 100%; }
-      .ems-page-list .ems-container .ems-container-right-reset .ems-mobile-filter-buttons {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between; }
-        .ems-page-list .ems-container .ems-container-right-reset .ems-mobile-filter-buttons .btnDefaultMobFilterAction {
-          display: none; }
-      .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding-left: 2px;
-        padding-right: 2px; }
-        .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a {
+  .ems-page-list .ems-pay-info {
+    display: none; }
+  .ems-page-list .footer-explanation {
+    margin-top: 0; }
+  .ems-page-list .ems-container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%; }
+    .ems-page-list .ems-container .ems-container-right-reset .ems-mobile-filter-buttons {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .ems-page-list .ems-container .ems-container-right-reset .ems-mobile-filter-buttons .btnDefaultMobFilterAction {
+        display: none; }
+    .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-left: 2px;
+      padding-right: 2px; }
+      .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a {
+        display: inline-block;
+        padding: 15px 10px 10px; }
+        .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a span, .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a i {
           display: inline-block;
-          padding: 15px 10px 10px; }
-          .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a span, .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a i {
-            display: inline-block;
-            vertical-align: middle; }
-          .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a i {
-            margin-right: 10px;
-            font-size: 20px; }
-            .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a i:before {
-              font-size: 20px;
-              color: #687083; }
-    .ems-page-list .ems-col-right .ems-cell .ems-desktop-filter-hide-count .urunKiyaslamaOzellik_UrunSayi span {
-      display: block;
-      background: #e8eaf1;
-      text-align: center;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-      .ems-page-list .ems-col-right .ems-cell .ems-desktop-filter-hide-count .urunKiyaslamaOzellik_UrunSayi span:empty {
-        display: none; }
-    .ems-page-list .ems-col-left {
-      position: fixed;
-      bottom: -100%;
-      width: 100%;
-      height: calc(100% - 50px);
-      z-index: 5;
-      background: #fff;
-      will-change: bottom;
-      transition: bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1);
-      -webkit-transition: bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1);
-      -o-transition: bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1); }
-      .ems-page-list .ems-col-left .ems-cell {
-        display: none; }
-    .ems-page-list .ems-container-right-reset {
-      background: #fff; }
-      .ems-page-list .ems-container-right-reset .emosInfinite {
-        padding-left: 5px;
-        padding-right: 5px; }
-    .ems-page-list .ems-container-widget {
+          vertical-align: middle; }
+        .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a i {
+          margin-right: 10px;
+          font-size: 20px; }
+          .ems-page-list .ems-container .ems-container-right-reset .mobile-element-sort-btns > a i:before {
+            font-size: 20px;
+            color: #687083; }
+  .ems-page-list .ems-col-right .ems-cell .ems-desktop-filter-hide-count .urunKiyaslamaOzellik_UrunSayi span {
+    display: block;
+    background: #e8eaf1;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .ems-page-list .ems-col-right .ems-cell .ems-desktop-filter-hide-count .urunKiyaslamaOzellik_UrunSayi span:empty {
       display: none; }
+  .ems-page-list .ems-col-left {
+    position: fixed;
+    bottom: -100%;
+    width: 100%;
+    height: calc(100% - 50px);
+    z-index: 5;
+    background: #fff;
+    will-change: bottom;
+    transition: bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-transition: bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    -o-transition: bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1); }
+    .ems-page-list .ems-col-left .ems-cell {
+      display: none; }
+  .ems-page-list .ems-container-right-reset {
+    background: #fff; }
+    .ems-page-list .ems-container-right-reset .emosInfinite {
+      padding-left: 5px;
+      padding-right: 5px; }
+  .ems-page-list .ems-container-widget {
+    display: none; }
+  /*Page list seviye 1*/
+  .ems-page-list.prd-list-s1 .ems-container .ems-col-right .ems-cell .ems-desktop-filter-hide-count,
+  .ems-page-list.prd-list-s1 .ems-container .ems-container-right-reset .mobile-element-sort-btns > a:last-child,
+  .ems-page-list.prd-list-s1 .ems-container .ems-col-left .ems-prd-list-discountFlg {
+    display: none; }
+  .ems-page-list.nav-cover .urunNavigasyon {
+    background: #0e9eb4;
+    padding-top: 0;
+    padding-bottom: 0; }
+    .ems-page-list.nav-cover .urunNavigasyon > span a {
+      color: #fff; }
+      .ems-page-list.nav-cover .urunNavigasyon > span a:before {
+        background: none;
+        content: '>';
+        color: #fff;
+        height: auto;
+        width: auto; }
   .product-list-cover {
     margin-bottom: 0;
     background: #0e9eb4;

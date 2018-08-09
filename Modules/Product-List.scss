@@ -716,6 +716,7 @@ ul.emosInfinite {
     .ems-prd-list-paging-bottom table tbody tr td .urunPaging_pageNavigation a.tumunuGoster{display: none !important;}
 }
 
+
 .ems-cat-description{
     &-inner{
         padding: 15px;
@@ -893,8 +894,14 @@ body.filter-popup-ready{
         .ems-page-list .ems-col-left{position: relative; z-index: 20; background: #f3f5f9;}
     }
     .ems-page{
-        &-listsearch{
-            padding-top: 50px;
+        &-listsearch{ padding-top: 50px; }
+    }
+    .ems-page-list{
+        &.prd-list-s1{
+            .ems-container{
+                .ems-col-left .ems-prd-list-discountFlg,
+                .ems-container-right-reset .ems-container.ems-cell-1{display: none;}
+            }
         }
     }
 }
@@ -905,21 +912,7 @@ body.filter-popup-ready{
             display: none;
         }
         .footer-explanation{margin-top: 0;}
-        /*.urunNavigasyon{
-            background: #0e9eb4;
-            padding-top: 0;
-            padding-bottom: 0;
-            > span a{
-                color: #fff;
-                &:before{
-                    background: none;
-                    content:'>';
-                    color: #fff;
-                    height: auto;
-                    width: auto;
-                }
-            }
-        }*/
+
         .ems-container{
             padding-left: 0;
             padding-right: 0;
@@ -997,6 +990,33 @@ body.filter-popup-ready{
         .ems-container{
             &-widget{
                 display: none;
+            }
+        }
+    }
+    /*Page list seviye 1*/
+    .ems-page-list{
+        &.prd-list-s1{
+            .ems-container{
+                .ems-col-right .ems-cell .ems-desktop-filter-hide-count,
+                .ems-container-right-reset .mobile-element-sort-btns > a:last-child,
+                .ems-col-left .ems-prd-list-discountFlg{display: none;}
+            }
+        }
+        &.nav-cover{
+            .urunNavigasyon{
+                background: #0e9eb4;
+                padding-top: 0;
+                padding-bottom: 0;
+                > span a{
+                    color: #fff;
+                    &:before{
+                        background: none;
+                        content:'>';
+                        color: #fff;
+                        height: auto;
+                        width: auto;
+                    }
+                }
             }
         }
     }
