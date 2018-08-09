@@ -22,71 +22,102 @@
 .site-footer{
     background-color: #fff;
     padding-bottom: 50px;
+    .footer-explanation{
+        margin-bottom: 30px;
+    }
     .ems-container{
         &-flex{
             @include flex();
-            max-width: 1060px;
-            padding-top: 30px;
-            .ems-col {
-                &-1{
-                    width: 80%;
-                    max-width: 830px;
+            @include flexDirection(column-reverse); 
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 100%;
+            .ems-col-2{
+                background: #10aac1;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                .ems-container{
+                    @include flex();
+                    justify-content: space-between;
+                    padding-left: 70px;
+                    padding-right: 70px;
                 }
-                &-2{
-                    width: 20%;
-                    max-width: 210px;
-                    .master-pass{
-                        margin-top: 20px;
-                        text-align: center;
-                    }
-                }
+                .master-pass{display: none;}
             }
         }
     }
     &-menu{
         > ul{
-            width: 33.333%;
-            max-width: 160px;
-            display: inline-block;
-            vertical-align: top;
-            margin-left: 5%;
-            &:first-child{margin-left:0;}
-            li{
-                *{
-                    color: $lDark;
-                    font-size: 12px;
-                }
+            @include flex();
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 30px;
+            > li{
+                width: 21.333%;
+                flex-basis: 21.333%;
+                margin-left: 1%;
+                &:first-child{margin-left: 0;}
                 a{
                     font-family: $regular;
-                    padding:5px 0;
-                    display: inline-block;
+                    padding:10px 0;
+                    display: block;
                     &:hover{
                         color: $btnAlternateColor;
                     }
                 }
-            } 
-        }
-        ul{
-            .title{
-                a{
-                    display: block;
-                    margin-bottom:15px;
-                    span{
-                        font-family:$bold;
-                        font-size: 16px;
+                > ul{
+                    margin-bottom: 20px;
+                    > li{
+                        &.title{
+                            > a{
+                                font-family: $medium;
+                                font-size: 16px;
+                                color: $btnAlternateColor;
+                            }
+                        }
+                        &.title-2{
+                            > a{ color: #07639e; }
+                        }
+                        &.title-3, &.title-black{
+                            > a{ color: #1e2432; }
+                        }
+                        &.title-3, &.title-2{
+                            > a{
+                                font-family: $medium;
+                                font-size: 14px;
+                                &:hover{color: $btnAlternateColor;}
+                            }
+                        }
+                        > ul{
+                            > li{
+                                display: inline-block;
+                                vertical-align: top;
+                                &.title-3, &.title-2{
+                                    display: block;
+                                    > a{
+                                        font-family: $medium;
+                                        font-size: 14px;
+                                        &:hover{color: $btnAlternateColor;}
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-            }
+            } 
         }
     }
     &-social{
+        width: 20%;
+        @include flex();
+        justify-content: space-between;
+        align-items: center;
         > ul{
             width: 100%;
             @include flex();
             justify-content: space-between;
             align-items: center;
-            padding-top: 30px;
-            padding-bottom: 40px;
             > li{
                 display: inline-block;
                 vertical-align: middle;
@@ -101,10 +132,41 @@
                         width: 23px;
                         &:before{
                             font-size: 23px;
-                            color: #687083;
+                            color: #fff;
                         }
                     }
                 }
+            }
+        }
+    }
+    &-contact{
+        width: 80%;
+        @include flex();
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 10px;
+        ul{
+            @include flex();
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 620px;
+            li{
+                width: 50%;
+                max-width: 290px;
+                a{
+                    text-align: center;
+                    display: block;
+                    font-family: $medium;
+                    font-size: 16px;
+                    color: #fff;
+                    background: $coverBg;
+                    padding: 17px 5px 16px 5px;
+                    border: 1px solid #fff;
+                    img{display: none;}
+                }
+                &.first{ padding-left: 5px; }
+                &.last{ padding-right: 5px; }
             }
         }
     }
@@ -120,36 +182,12 @@
             }
         }
     }
-    &-contact{
-        ul{
-            li{
-                a{
-                    text-align: center;
-                    display: block;
-                    font-family: $medium;
-                    font-size: 16px;
-                    color: #fff;
-                    background: $coverBg;
-                    padding: 17px 5px 16px 5px;
-                }
-                &.first{
-                    img{
-                        margin-right: 10px;
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                }
-                &:first-child{
-                    a{
-                        margin-bottom: 5px;
-                    }
-                }
-            }
-        }
-    }
     &-copyright{
         text-align: left;
         padding: 40px 0 40px 0;
+        @include flex();
+        align-items: center;
+        justify-content: space-between;
         > *{
             font-family: $regular;
             color: $lDark;
