@@ -9650,6 +9650,10 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
       margin-top: 0; }
   .footer-explanation .less .showMore {
     margin-top: 20px; }
+  .footer-explanation h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px; }
 
 .site-footer {
   background-color: #fff;
@@ -9724,10 +9728,10 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           font-family: "medium";
           font-size: 16px;
           color: #10aac1; }
+        .site-footer-menu > ul > li > ul > li.title-3 > a, .site-footer-menu > ul > li > ul > li.title-2.title-black > a {
+          color: #1e2432; }
         .site-footer-menu > ul > li > ul > li.title-2 > a {
           color: #07639e; }
-        .site-footer-menu > ul > li > ul > li.title-3 > a, .site-footer-menu > ul > li > ul > li.title-black > a {
-          color: #1e2432; }
         .site-footer-menu > ul > li > ul > li.title-3 > a, .site-footer-menu > ul > li > ul > li.title-2 > a {
           font-family: "medium";
           font-size: 14px; }
@@ -9736,6 +9740,17 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         .site-footer-menu > ul > li > ul > li > ul > li {
           display: inline-block;
           vertical-align: top; }
+          @media screen and (min-width: 850px) {
+            .site-footer-menu > ul > li > ul > li > ul > li > a:after {
+              content: ',';
+              font-size: 14px;
+              color: #3b4354;
+              display: inline-block;
+              padding-right: 3px; }
+            .site-footer-menu > ul > li > ul > li > ul > li:last-child > a:after {
+              display: none; }
+            .site-footer-menu > ul > li > ul > li > ul > li.title-3 > a:after, .site-footer-menu > ul > li > ul > li > ul > li.title-2 > a:after {
+              display: none; } }
           .site-footer-menu > ul > li > ul > li > ul > li.title-3, .site-footer-menu > ul > li > ul > li > ul > li.title-2 {
             display: block; }
             .site-footer-menu > ul > li > ul > li > ul > li.title-3 > a, .site-footer-menu > ul > li > ul > li > ul > li.title-2 > a {
@@ -9743,6 +9758,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
               font-size: 14px; }
               .site-footer-menu > ul > li > ul > li > ul > li.title-3 > a:hover, .site-footer-menu > ul > li > ul > li > ul > li.title-2 > a:hover {
                 color: #10aac1; }
+          .site-footer-menu > ul > li > ul > li > ul > li.title-3.title-lblack > a {
+            color: #07639e; }
   .site-footer-social {
     width: 20%;
     -webkit-box-sizing: border-box;
@@ -9956,18 +9973,12 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
     padding: 20px; }
   .site-footer {
     padding-bottom: 0; }
-    .site-footer .ems-container-flex {
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      flex-direction: column;
-      padding: 0; }
-      .site-footer .ems-container-flex .ems-col-1, .site-footer .ems-container-flex .ems-col-2 {
-        width: 100%;
-        max-width: 100%; }
-      .site-footer .ems-container-flex .ems-col-2 .master-pass {
-        margin-bottom: 20px; }
+    .site-footer .footer-explanation {
+      display: none; }
+    .site-footer .ems-container-flex .ems-col-2 .ems-container {
+      padding-left: 40px;
+      padding-right: 40px;
+      max-width: 100%; }
     .site-footer .kutuBulten {
       background: #fff;
       padding-top: 40px;
@@ -10020,49 +10031,93 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
           -ms-flex-order: 5;
           order: 5; }
     .site-footer-menu {
-      background: #f3f5f9;
       padding-top: 20px;
       padding-bottom: 20px; }
-      .site-footer-menu > ul {
-        margin-top: 20px; }
-        .site-footer-menu > ul:first-child {
-          margin-top: 0; }
-      .site-footer-menu ul {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
+      .site-footer-menu ul li a {
         text-align: center; }
-        .site-footer-menu ul li {
-          /*ul{
-                        max-height: 0;
-                        overflow: hidden;
-                    }*/ }
-          .site-footer-menu ul li.title a {
-            margin-bottom: 0;
-            padding-top: 10px;
-            padding-bottom: 10px; }
-          .site-footer-menu ul li a {
+      .site-footer-menu > ul {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        padding-top: 0; }
+        .site-footer-menu > ul > li {
+          width: 100%;
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+          margin-left: 0;
+          display: none;
+          margin-top: 10px; }
+          .site-footer-menu > ul > li:first-child {
+            margin-top: 0; }
+          .site-footer-menu > ul > li:nth-child(1), .site-footer-menu > ul > li:nth-child(2), .site-footer-menu > ul > li.mobile-element {
+            display: block; }
+          .site-footer-menu > ul > li > a.title-all-view {
+            font-family: "medium";
             font-size: 14px;
-            padding-top: 10px;
-            padding-bottom: 10px; }
-    .site-footer-social > ul {
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 15px;
-      padding-bottom: 15px; }
+            color: #07639e; }
+            .site-footer-menu > ul > li > a.title-all-view span:nth-child(2) {
+              display: none; }
+          .site-footer-menu > ul > li > a.title-all {
+            font-family: "bold";
+            font-size: 14px;
+            color: #1e2432; }
+            .site-footer-menu > ul > li > a.title-all i {
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 10px; }
+              .site-footer-menu > ul > li > a.title-all i:before {
+                color: #687083; }
+            .site-footer-menu > ul > li > a.title-all span:last-child {
+              display: none; }
+          .site-footer-menu > ul > li > ul {
+            margin-bottom: 0;
+            display: none; }
+            .site-footer-menu > ul > li > ul:first-child {
+              display: block; }
+            .site-footer-menu > ul > li > ul:nth-child(2) {
+              margin-top: 10px; }
+            .site-footer-menu > ul > li > ul > li.title-3 > a {
+              font-family: "regular"; }
+            .site-footer-menu > ul > li > ul > li > ul > li {
+              display: block; }
+          .site-footer-menu > ul > li.opened {
+            display: block; }
+            .site-footer-menu > ul > li.opened > a.title-all-view > span:nth-child(1) {
+              display: none; }
+            .site-footer-menu > ul > li.opened > a.title-all-view > span:nth-child(2) {
+              display: block; }
+            .site-footer-menu > ul > li.opened > ul:nth-child(2) {
+              display: block; }
+        .site-footer-menu > ul.opened > li {
+          display: block; }
+          .site-footer-menu > ul.opened > li.title-sev1 a.title-all span:nth-child(2) {
+            display: none; }
+          .site-footer-menu > ul.opened > li.title-sev1 a.title-all span:nth-child(3) {
+            display: inline-block; }
+          .site-footer-menu > ul.opened > li.title-sev1 a.title-all i:before {
+            content: '\e905'; }
+    .site-footer-social {
+      width: 100%; }
     .site-footer-copyright {
       text-align: center;
-      padding-top: 30px;
-      padding-bottom: 15px; }
+      padding-top: 10px;
+      padding-bottom: 10px;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column; }
     .site-footer-redirect ul {
-      padding-top: 15px;
-      padding-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
       .site-footer-redirect ul li a {
-        padding: 10px; } }
+        padding: 10px;
+        display: block; } }
 
 .site-header-wrapper {
   width: 100%; }
