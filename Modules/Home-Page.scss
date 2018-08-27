@@ -5,6 +5,32 @@
         .urnList .ems-prd-list-prop{display: none;}
         /*.urnList .product-empty .btnDefaultAlternate, .urnList .ems-prd-list{ display: none; }*/
     }
+    &-corporate{
+        #mesajGonder{
+            .ems-page-default-info {
+                .ems-field{
+                    .geneltelefon, .site_textarea{
+                        width: 100% !important;
+                    }
+                    .site_textarea{
+                        height: 100px;
+                        resize: none;
+                    }
+                    &.msgCaptcha {
+                        span[id$="lbfUYE_KONTROLKODU"]{
+                            display: block;
+                            margin-top: 15px;
+                        }
+                    }
+                    &.button{
+                        .btnMesajGonder{
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width:850px){
@@ -18,7 +44,6 @@
             #ajxUrunList .emosInfinite {padding-bottom:30px}
         }
     }   
-
 }
 
 .ems-container {
@@ -482,11 +507,6 @@
     }
 }
 
-/*Animation control*/
-@media screen and (min-width: $breakpointXSM){
-
-}
-
 .ems-pay-info {
     padding-top: 25px;
     padding-bottom: 35px;
@@ -560,6 +580,25 @@
                 order: 50;
                 padding-left: 0;
                 padding-right: 0;
+            }
+        }
+        &-corporate{
+            #mesajGonder{
+                .ems-page-default-info {
+                    .ems-field{
+                        &.button{
+                            margin-left: 20px !important;
+                            margin-right: 20px !important;
+                        }
+                    }
+                }
+            }
+            .ems-col-full{
+                .ems-page-content-2{
+                    padding-top: 0 !important;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
             }
         }
     }

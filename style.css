@@ -10980,6 +10980,16 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
     /*.urnList .product-empty .btnDefaultAlternate, .urnList .ems-prd-list{ display: none; }*/ }
     .ems-page-home .urnList .ems-prd-list-prop {
       display: none; }
+  .ems-page-corporate #mesajGonder .ems-page-default-info .ems-field .geneltelefon, .ems-page-corporate #mesajGonder .ems-page-default-info .ems-field .site_textarea {
+    width: 100% !important; }
+  .ems-page-corporate #mesajGonder .ems-page-default-info .ems-field .site_textarea {
+    height: 100px;
+    resize: none; }
+  .ems-page-corporate #mesajGonder .ems-page-default-info .ems-field.msgCaptcha span[id$="lbfUYE_KONTROLKODU"] {
+    display: block;
+    margin-top: 15px; }
+  .ems-page-corporate #mesajGonder .ems-page-default-info .ems-field.button .btnMesajGonder {
+    margin-top: 30px; }
 
 @media screen and (min-width: 850px) {
   .ems-page-home .ems-container-margin {
@@ -11402,7 +11412,6 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
   .ems-banners-type-1 .ems-banners-box-right .ems-banners-text {
     text-align: right; }
 
-/*Animation control*/
 .ems-pay-info {
   padding-top: 25px;
   padding-bottom: 35px;
@@ -11471,6 +11480,13 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
       order: 50;
       padding-left: 0;
       padding-right: 0; }
+    .ems-page-corporate #mesajGonder .ems-page-default-info .ems-field.button {
+      margin-left: 20px !important;
+      margin-right: 20px !important; }
+    .ems-page-corporate .ems-col-full .ems-page-content-2 {
+      padding-top: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important; }
   .ems-pay-info {
     padding-top: 0;
     padding-bottom: 0; }
