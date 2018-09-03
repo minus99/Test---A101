@@ -9271,29 +9271,53 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
 
 .kutuKategori .menuKategori {
   padding: 15px 10px; }
-  .kutuKategori .menuKategori li a {
-    display: block;
-    padding: 5px 10px; }
+  .kutuKategori .menuKategori li {
+    position: relative; }
+    .kutuKategori .menuKategori li a {
+      display: block;
+      padding: 10px 30px 10px 10px; }
   .kutuKategori .menuKategori > li > a {
     font-family: "medium";
     font-size: 14px;
     text-transform: uppercase;
     padding: 10px; }
   .kutuKategori .menuKategori > li > ul {
-    padding: 5px 15px; }
-    .kutuKategori .menuKategori > li > ul li a {
-      font-size: 12px; }
-      .kutuKategori .menuKategori > li > ul li a.active {
-        color: #07639e;
-        font-family: "medium"; }
-    .kutuKategori .menuKategori > li > ul > li > a.active {
+    padding: 5px 10px; }
+    .kutuKategori .menuKategori > li > ul > li.sub-items > b {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      z-index: 1;
+      font-weight: normal; }
+      .kutuKategori .menuKategori > li > ul > li.sub-items > b:after {
+        font-family: 'icomoon';
+        content: '\e918';
+        position: absolute;
+        top: 11px;
+        right: 0px;
+        width: 15px;
+        height: 15px;
+        font-size: 11px;
+        line-height: 15px;
+        text-align: center; }
+    .kutuKategori .menuKategori > li > ul > li > a {
       font-size: 14px;
-      color: #1e2432; }
+      font-family: "regular"; }
     .kutuKategori .menuKategori > li > ul > li > ul {
+      display: none;
       padding-top: 5px; }
       .kutuKategori .menuKategori > li > ul > li > ul > li > a {
-        padding-top: 8px;
-        padding-bottom: 8px; }
+        font-size: 12px; }
+      .kutuKategori .menuKategori > li > ul > li > ul > li > a.active {
+        font-family: "bold";
+        color: #07639e; }
+    .kutuKategori .menuKategori > li > ul > li.s2.sub-items.opened > b:after {
+      content: '\e914'; }
+    .kutuKategori .menuKategori > li > ul > li.s2.sub-items.opened > a.active {
+      font-family: "bold"; }
 
 .kutuSolMenuTree .sStylerMainWrp.sStylerWrp_select, .kutuSolMenuTree .kutuHeaderSolMenuTree {
   display: none; }
@@ -12695,6 +12719,9 @@ body.ems-login.mini-login-ready .mod-mini-login-body .sub.login {
   body.ems-login.mini-login-ready .mod-mini-login-header > span[id$="lbhKUTU_HESABIM"] {
     background: none;
     color: #fff; } }
+
+.navigasyon > span b {
+  font-weight: normal; }
 
 .navigasyon > span a {
   display: inline-block;
