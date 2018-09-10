@@ -9658,7 +9658,8 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
     bottom: 0; } }
 
 .footer-explanation {
-  margin-top: 30px; }
+  max-width: 1200px;
+  margin: 30px auto; }
   .footer-explanation span.showLess, .footer-explanation span.showMore {
     display: block;
     clear: both;
