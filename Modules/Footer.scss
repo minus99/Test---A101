@@ -198,8 +198,10 @@
         }
     }
     &-redirect{
-        ul{
-            @include flex();
+        ul{ 
+            @media screen and (min-width: $breakpointSM){
+                @include flex();
+            }
             justify-content: flex-end;
             width: 100%;
             li{
@@ -212,7 +214,9 @@
     &-copyright{
         text-align: left;
         padding: 40px 0 40px 0;
-        @include flex();
+        @media screen and (min-width: $breakpointSM){
+            @include flex();
+        }
         align-items: center;
         justify-content: space-between;
         > *{
@@ -302,7 +306,7 @@
     }
 }
 
-@media screen and (max-width: $breakpointXSM){
+@media screen and (max-width: $breakpointSM){
     .footer-explanation{    
         .less, .more{padding: 20px;}
     }
@@ -378,16 +382,18 @@
             padding-top: 20px;
             padding-bottom: 20px;
             ul{
-                li{ a{ text-align: center; } }
+                li{
+                    flex-basis:inherit;
+                    a{ text-align: center; } }
             }
             > ul{
-                @include flexDirection(column);
+                /* @include flexDirection(column);*/
                 padding-top: 0;
                 > li{
-                    width: 100%;
-                    flex-basis: 100%;
+                    width: 100%;/*
+                    flex-basis: 100%;*/
                     margin-left: 0;
-                    display: none;
+                    /*display: none;*/
                     margin-top: 10px;
                     &:first-child{margin-top: 0;}
                     &:nth-child(1),
@@ -464,18 +470,38 @@
         &-copyright{
             text-align: center;
             padding-top: 10px;
-            padding-bottom: 10px;
-            @include flexDirection(column);
+            padding-bottom: 10px; /*
+            @include flexDirection(column); */
         }
         &-redirect{
             ul{
                 padding-top: 10px;
-                padding-bottom: 10px;
-                justify-content: center;
+                padding-bottom: 10px; /*
+                justify-content: center; */ 
                 li{
                     a{padding: 10px; display: block;}
                 }
             }
         }
     }
+}
+
+
+
+/* Last Type Custom Footer */
+
+@media screen and (max-width: $breakpointSM){
+
+ 
+    .site-footer-menu{
+        ul{
+            li{
+                a{
+                
+                }
+            }
+        }
+    }
+
+
 }

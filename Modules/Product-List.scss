@@ -383,7 +383,7 @@ ul.emosInfinite {
         }
         &-mask{
             position: relative;
-            padding: 20px;
+            padding: 20px 20px 10px 20px;
             @include flex();
             @include flexDirection(column-reverse);
         }
@@ -402,7 +402,7 @@ ul.emosInfinite {
         }
         &-content{
             height: 110px;
-            max-height: 110px;
+            max-height: 66px;
             overflow: hidden;
             @include flex();
             @include flexDirection(column-reverse);
@@ -900,7 +900,7 @@ body.filter-popup-ready{
         &.prd-list-s1{
             .ems-container{
                 .ems-col-left .ems-prd-list-discountFlg,
-                .ems-container-right-reset .ems-container.ems-cell-1{display: none;}
+                .ems-container-right-reset .ems-container.ems-cell-1{}
             }
         }
     }
@@ -970,6 +970,7 @@ body.filter-popup-ready{
             }
         }
         .ems-col-left{
+            overflow: scroll;
             position: fixed;
             bottom: -100%;
             width: 100%;
@@ -977,6 +978,7 @@ body.filter-popup-ready{
             z-index: 5;
             background: #fff;
             will-change: bottom;
+            padding-bottom:50px;
             @include transition(bottom 333ms cubic-bezier(0.25, 0.1, 0.25, 1));
             .ems-cell{ display: none; }
         }
@@ -998,7 +1000,7 @@ body.filter-popup-ready{
         &.prd-list-s1{
             .ems-container{
                 .ems-col-right .ems-cell .ems-desktop-filter-hide-count,
-                .ems-container-right-reset .mobile-element-sort-btns > a:last-child,
+                /*.ems-container-right-reset .mobile-element-sort-btns > a:last-child,*/
                 .ems-col-left .ems-prd-list-discountFlg{display: none;}
             }
         }
@@ -1243,6 +1245,10 @@ body.filter-popup-ready{
         position: fixed;
         top: 0;
         width: 100%;
+        .ems-mobile-filter-buttons{
+            visibility: visible;
+            opacity: 1;
+        }
         .vailFilter{
             opacity: 0;
             visibility: hidden;
@@ -1257,6 +1263,89 @@ body.filter-popup-ready{
                      }
                 }
             }
+        }
+    }
+    
+    /* Sıralama Tipi Mobile Button*/
+    .ems-mobile-list-type-buttons{
+        visibility:hidden;
+        opacity:0;
+        transition:all 1s;
+        bottom:0;
+        position: absolute;
+        width:100%;
+    }
+    body.sort-popup-ready{
+        .ems-mobile-list-type-buttons{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+
+/* En Çok Satanlar ve Yeni Ürünler Sayfası */
+
+.ems-page-list-new-products , .ems-page-list-best-selling{
+    padding-top:20px; 
+}
+
+/* Ürün Tipi Tanımlama 
+.product-type-spr{
+    height:53px;
+    span{
+        display:none;
+    }
+}
+.spr1{
+    .product-type-spr{
+        span{
+        display: block;
+        padding: 7%;
+        font-family: "medium";
+        font-size: 14px;
+        font-weight: 500;
+        color: #10aac1;
+        background: #f3f5f9;
+        }
+    }    
+} */
+
+
+
+/* Ürün Liste Kampanya ikonu */
+.ems-prd-campaign-icon{
+    display:none;
+}
+.ems-page-list{
+    .ems-prd-campaign-icon{
+        min-height:40px;
+        max-height:40px;
+        margin-bottom:5px;
+        display:block;
+        span{   
+            img{
+                height: 40px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            &:nth-child(2){
+                display:none;
+                }
+            }
+        }
+    }
+}
+
+
+/* Ürün Detay Kampanya Text */
+.ems-page-detail{
+    .ems-prd-campaign-text{
+        margin:10px 0px;
+        color:#10aac1;
+        font-family: 'medium';
+        span{
+            display:block;
+            padding:10px 0px;
         }
     }
 }

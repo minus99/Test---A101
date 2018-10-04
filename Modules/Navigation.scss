@@ -24,9 +24,9 @@
 @media screen and (max-width: $breakpointXSM){
     .navigasyon {
         > span{
-            display: table;
+            display: inline-block;
             table-layout: fixed;
-            width: 100%;
+            width: auto;
             a{
                 font-size: 12px;
             }

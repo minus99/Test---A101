@@ -824,3 +824,23 @@
         max-width: 100%;
     }
 }
+
+
+/* Üye Aktivasyon Onay */
+
+.pageUyeBasarili_mesaj{
+span[id$="lblBasariliSMSPasif"]{
+        .ems-message{
+            margin-bottom:0px;
+        &-success {
+            border: 3px solid green;
+            background: #fff;
+            display: flex;
+            align-items: center;
+        &-text {
+            color: #222;
+                }
+            }
+        }
+    }
+}

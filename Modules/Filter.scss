@@ -300,15 +300,18 @@
             }
         }
         &-filter-buttons, &-filter-buttons{
-            position: absolute;
+            position: fixed;
+            z-index: 2;
             left: 0;
             width: 100%;
             bottom: 0;
-            display: table;
+            opacity: 0;
+            transition:all 1s;
+            visibility: hidden;
             a.btnDefault{
-                display: table-cell;
+                display: inline-block;
                 vertical-align: top;
-                width: auto;
+                width: 50%;
                 min-width: 50%;
                 &.btnDefaultMobFilterAction{
                     background: $btnColor;
@@ -381,3 +384,4 @@
     }
 
 }
+

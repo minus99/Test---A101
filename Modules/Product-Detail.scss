@@ -19,8 +19,9 @@
                 vertical-align: middle;
                 font-size: 12px;
                 color: $darkBlack;
-                max-width: 150px;
-                text-overflow: ellipsis;
+                /*max-width: 150px;
+                text-overflow: ellipsis;*/
+                
                 white-space: nowrap;
                 overflow: hidden;
                 &:before{

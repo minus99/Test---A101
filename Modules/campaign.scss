@@ -1,0 +1,29 @@
+.firsatlar-page-slider{
+    margin:30px 0px;
+    .ems-prd-campaign-temp{
+        margin: 0 auto;
+        min-height:30px;
+        height:30px;
+        display:block !important;
+        img{
+            height:30px;
+        }
+    }
+    .Temin.Edilebiliyor{
+            .urunListe_sepet{
+                display:block !important;
+            }
+                .urunListe_stokHaberci{
+                display:none !important;
+            }
+        }
+    .Temin.Edilemiyor{
+        .urunListe_sepet{
+            display:none !important;
+        }
+        .urunListe_stokHaberci{
+            display:block !important;
+        }
+    }
+
+}

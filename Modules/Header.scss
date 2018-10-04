@@ -98,12 +98,13 @@
             vertical-align: middle;
             > a{
                 font-family: $medium;
-                font-size: 16px;
+                font-size: 14px;
                 display: block;
                 text-align: center;
-                padding: 27px 10px 27px 10px;
+                padding: 10px;
                 position: relative;
                 overflow: hidden;
+                text-transform: uppercase;
                 &:after{
                     content:'';
                     position: absolute;
@@ -248,7 +249,7 @@ body.ems-logoff{
 
 @media screen and (min-width: 850px){
     .site-header{
-        min-height:160px;
+        min-height:169px;
         &-wrapper{
             position: fixed;
             top: 0;
@@ -259,11 +260,11 @@ body.ems-logoff{
         .nav-main{
             > ul{
                 > li{
-                    flex-basis: 12.5%;
+                    flex-basis: 14.5%;
                     > a{
                         text-transform: uppercase;
-                        max-height: 88px;
-                        min-height: 88px;
+                        max-height: 50px;
+                        min-height: 50px;
                         display: table;
                         width: 100%;
                         > span{
@@ -397,9 +398,9 @@ body.ems-logoff{
                                             flex-wrap: wrap;
                                             padding: 5px 0;
                                             > li{
-                                                width: 33%;
-                                                flex-basis: 33%;
-                                                padding:6px 5px;
+                                                width: 32.5%;
+                                                flex-basis: 32.5%;
+                                                padding:6px 3px;
                                                 > a{
                                                     display: block;
                                                     position: relative;
@@ -407,7 +408,7 @@ body.ems-logoff{
                                                     &:after{
                                                         content: '';
                                                         opacity: 0.3;
-                                                        background-color: #1e2432;
+                                                        /*background-color: #1e2432;*/
                                                         width: 100%;
                                                         height: 100%;
                                                         position: absolute;
@@ -760,6 +761,12 @@ body.ems-logoff{
                                         a{border-top:none;}
                                     }
                                 }
+                            }
+                        }
+                        /* Mobile Menu İmage bulunan kategorilerin gizlenmesi.  */
+                        > li{
+                            &:nth-child(2){
+                                display: none;
                             }
                         }
                     }

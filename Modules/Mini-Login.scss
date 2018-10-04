@@ -144,6 +144,7 @@
     }
 }
 
+
 body.mini-login-ready{
     .mod-mini-login{
         &-header{
@@ -169,6 +170,13 @@ body.ems-logoff.mini-login-ready{
             }
         }
     }
+}
+body.ems-logoff{
+.mod-mini-login-header{
+    span[id$="lbfKUTU_HESABIM"]{
+        display:none;
+    }
+}
 }
 
 body.ems-login.mini-login-ready{
