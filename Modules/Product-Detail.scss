@@ -275,7 +275,7 @@ body.suggestions-popup-ready{
             width: calc(100% - 480px);
             .swiper-container{
                 &-detail{
-                    padding-left: 80px;
+                  /*  padding-left: 80px; */
                     .swiper-slide{
                         > div a, > div a img{
                             width: 100%;
@@ -1267,4 +1267,20 @@ body.suggestions-popup-ready{
         }
     }
     
+}
+
+
+/* Ürün Detay Yerli Üretim */
+
+
+.ems-prd-detail.spr2 .ems-prd-zoom:before {
+    content: '';
+    width: 79px;
+    height: 34px;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    background: url('/upload/yerli-uretim.png');
+    background-repeat: no-repeat;
+    bottom: 0px;
 }

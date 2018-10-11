@@ -3019,3 +3019,21 @@ body.guest-checkout-layout{
         }
     }
 }
+
+
+
+/* Cart Stock Alert Sepette ekli durumda olup stok biten ürünler için çıkan uyarı. */ 
+
+.cart-stock-alert {
+    margin: 37px 0px;
+    background: #fff;
+    .pageErrorDefault{
+        padding: 10px;
+        display: block;
+        margin: 24px 0px;
+        .uyari{
+            font-family:'medium';
+            padding:15px;
+        }
+    }
+}

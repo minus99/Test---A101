@@ -818,7 +818,9 @@
         width: 94%;
         margin: 10px auto;
         position: relative;
-
+        a{
+            display:block;
+        }
         .mobile-banner-img {
             width: 100%;
         }
@@ -833,7 +835,7 @@
             font-family: 'medium';
         }
 
-        a {
+        .mobile-banner-btn {
             position: absolute;
             left: 20px;
             bottom: 20px;

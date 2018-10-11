@@ -9260,6 +9260,18 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         font-family: "bold";
         margin: 3px 0 18px; }
 
+/* Cart Stock Alert Sepette ekli durumda olup stok biten ürünler için çıkan uyarı. */
+.cart-stock-alert {
+  margin: 37px 0px;
+  background: #fff; }
+  .cart-stock-alert .pageErrorDefault {
+    padding: 10px;
+    display: block;
+    margin: 24px 0px; }
+    .cart-stock-alert .pageErrorDefault .uyari {
+      font-family: 'medium';
+      padding: 15px; }
+
 .kutuKategori .kutuFooterKategori {
   display: none; }
 
@@ -10163,7 +10175,22 @@ body.guest-checkout-layout .ems-page-cart-colmn-3, body.guest-checkout-layout .e
         padding: 10px;
         display: block; } }
 
-/* Last Type Custom Footer */
+/* Bize Yazın Mobile */
+@media screen and (max-width: 960px) {
+  .ems-container.mobile-bize-yazin {
+    padding-right: 10px;
+    padding-left: 10px; }
+    .ems-container.mobile-bize-yazin .site-footer-contact {
+      padding-right: 0px;
+      width: 100%; }
+      .ems-container.mobile-bize-yazin .site-footer-contact .first {
+        display: none; }
+      .ems-container.mobile-bize-yazin .site-footer-contact .last {
+        margin-bottom: 20px;
+        width: 100%;
+        padding-right: 0px;
+        max-width: 100%; } }
+
 .site-header-wrapper {
   width: 100%; }
 
@@ -11023,6 +11050,14 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
   body.ems-logoff.mobi-login-ready .mod-mini-login-body .sub.logoff {
     display: block; } }
 
+/* Header Kurumsal Link Yönlendirmesi */
+.corporate-link {
+  position: fixed;
+  left: 0px;
+  top: 180px; }
+  .corporate-link img {
+    width: 34px; }
+
 .ems-page {
   background: #f3f5f9;
   padding-top: 20px; }
@@ -11577,6 +11612,8 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
     width: 94%;
     margin: 10px auto;
     position: relative; }
+    .homepage-banner-item a {
+      display: block; }
     .homepage-banner-item .mobile-banner-img {
       width: 100%; }
     .homepage-banner-item .mobile-banner-text {
@@ -11587,7 +11624,7 @@ body.ems-logoff .site-header .mobile-element-fixed-user div a.login {
       font-size: 20px;
       width: 100%;
       font-family: 'medium'; }
-    .homepage-banner-item a {
+    .homepage-banner-item .mobile-banner-btn {
       position: absolute;
       left: 20px;
       bottom: 20px;
@@ -13261,7 +13298,7 @@ body.suggestions-popup-ready .custom-popup {
   .ems-prd-detail-inner .inner-row-1 {
     width: calc(100% - 480px); }
     .ems-prd-detail-inner .inner-row-1 .swiper-container-detail {
-      padding-left: 80px; }
+      /*  padding-left: 80px; */ }
       .ems-prd-detail-inner .inner-row-1 .swiper-container-detail .swiper-slide > div a, .ems-prd-detail-inner .inner-row-1 .swiper-container-detail .swiper-slide > div a img {
         width: 100%;
         max-width: 430px;
@@ -14151,6 +14188,18 @@ body.suggestions-popup-ready .custom-popup {
       top: 0; }
     body.suggestions-popup-ready .customPopup {
       display: none; } }
+
+/* Ürün Detay Yerli Üretim */
+.ems-prd-detail.spr2 .ems-prd-zoom:before {
+  content: '';
+  width: 79px;
+  height: 34px;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  background: url("/upload/yerli-uretim.png");
+  background-repeat: no-repeat;
+  bottom: 0px; }
 
 .ems-page-list {
   position: relative;
@@ -15360,26 +15409,27 @@ body.filter-popup-ready .vailFilter {
 .ems-page-list-new-products, .ems-page-list-best-selling {
   padding-top: 20px; }
 
-/* Ürün Tipi Tanımlama 
-.product-type-spr{
-    height:53px;
-    span{
-        display:none;
-    }
-}
-.spr1{
-    .product-type-spr{
-        span{
-        display: block;
-        padding: 7%;
-        font-family: "medium";
-        font-size: 14px;
-        font-weight: 500;
-        color: #10aac1;
-        background: #f3f5f9;
-        }
-    }    
-} */
+/* İnternete Özel Kampanya İkonu */
+.ems-prd.spr3 .ems-prd-inner:after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  z-index: 11111;
+  left: -8px;
+  background: url("/upload/frontend/interneteozel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 110px;
+  height: 38px;
+  z-index: 0; }
+
+@media screen and (max-width: 850px) {
+  .ems-prd.spr3 .ems-prd-inner:after {
+    left: -6px;
+    width: 95px;
+    height: 33px; } }
+
+/* İnternete Özel Kampanya İkonu Son */
 /* Ürün Liste Kampanya ikonu */
 .ems-prd-campaign-icon {
   display: none; }

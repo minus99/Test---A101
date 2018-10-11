@@ -488,20 +488,28 @@
 
 
 
-/* Last Type Custom Footer */
+/* Bize Yazın Mobile */
 
 @media screen and (max-width: $breakpointSM){
 
- 
-    .site-footer-menu{
-        ul{
-            li{
-                a{
-                
+    .ems-container{
+        &.mobile-bize-yazin{
+            padding-right:10px;
+            padding-left:10px;
+            .site-footer-contact{
+                padding-right:0px;
+                width:100%;
+                .first{
+                    display:none;
+                }
+                .last{
+                    margin-bottom:20px;
+                    width:100%;
+                    padding-right:0px;
+                    max-width:100%;
                 }
             }
         }
     }
-
 
 }

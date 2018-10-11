@@ -1290,26 +1290,34 @@ body.filter-popup-ready{
     padding-top:20px; 
 }
 
-/* Ürün Tipi Tanımlama 
-.product-type-spr{
-    height:53px;
-    span{
-        display:none;
-    }
+
+/* İnternete Özel Kampanya İkonu */
+
+.ems-prd.spr3 .ems-prd-inner:after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    z-index: 11111;
+    left: -8px;
+    background: url('/upload/frontend/interneteozel.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 110px;
+    height: 38px;
+    z-index: 0;
 }
-.spr1{
-    .product-type-spr{
-        span{
-        display: block;
-        padding: 7%;
-        font-family: "medium";
-        font-size: 14px;
-        font-weight: 500;
-        color: #10aac1;
-        background: #f3f5f9;
-        }
-    }    
-} */
+@media screen and (max-width: $breakpointXSM){
+
+    .ems-prd.spr3 .ems-prd-inner:after{
+        left:-6px;
+        width:95px;
+        height:33px;
+    }
+
+}
+
+/* İnternete Özel Kampanya İkonu Son */
+
 
 
 
@@ -1349,3 +1357,5 @@ body.filter-popup-ready{
         }
     }
 }
+
+
