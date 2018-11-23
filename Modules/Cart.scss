@@ -891,7 +891,8 @@ body.guest-checkout-layout{
         }
     }
     .ems-cart-summary-coupon {
-        display: none;
+        margin-top:15px;
+        display: block;
         .indKod {
             font-size: 14px;
             color:$lDark;
@@ -905,6 +906,7 @@ body.guest-checkout-layout{
             input {
                 width: 100% !important;
                 padding-right: 100px;
+                padding-top:0px;
                 background: #ffffff;
             }
             table {

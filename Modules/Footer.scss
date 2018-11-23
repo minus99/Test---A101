@@ -513,3 +513,88 @@
     }
 
 }
+
+
+
+
+.new-footer{
+    margin-top:30px;
+    display:flex;
+    .new-footer-corporate{
+        width:25%;
+        ul{
+            margin:10px;
+            span{
+                font-family: "medium";
+                font-size: 16px;
+                color: #10aac1;
+            }
+            li{
+                margin-top:10px;
+                a{
+                    padding:10px 0px;
+                    display:block;
+                }
+            }
+        }
+    }
+    .new-footer-categories{
+        width:75%;
+        padding-left:20px;
+        .new-footer-categories-wrapper{
+            /*display: flex;
+            flex-wrap:wrap;
+            justify-content: flex-start;
+            */
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            li.svy1{/*
+                width:calc((100% - 60px) / 3);
+                margin:10px;*/
+                width: 100%;
+                > a{
+                    color: #07639e;
+                    font-size:14px;
+                    font-family: 'medium';
+                }
+                li.svy2{
+                    margin-bottom:15px;
+                    margin-top:15px;
+                    > a{ 
+                        color: #07639e;
+                        font-size:14px;
+                        font-family: 'medium';
+                    }
+                    li.svy3{
+                        margin-top:15px;
+                        margin-bottom:15px;
+                      >  a{
+                            font-size:inherit;
+                            font-family: inherit;
+                            color:inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointSM){
+    .new-footer{
+        display:unset;
+        .new-footer-corporate{
+            width:100%;
+        }   
+        .new-footer-categories{
+            width:100%;
+            .new-footer-categories-wrapper{
+                column-count: unset;
+                li.svy1{
+                    column-count: 2;
+                }
+            }
+        }
+    }
+}

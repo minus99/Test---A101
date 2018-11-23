@@ -52,8 +52,150 @@
     }
 }
 
+
+/* Black Friday Sayaç */
+.countdown-active{
+    .site-header{
+        min-height:215px;
+    }
+}
+.countdown-banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height:88px;
+    background-image: url(/UPLOAD/BANNERS/countdown/countdownbanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .countdown-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .countdown-icon{
+            width:105px;
+        }
+        span.countdown-text{
+            font-family: $medium;
+            font-size: 15px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: -0.3px;
+            color: #ffffff;
+        }
+        div.countdown-timer{ 
+            text-align: center;
+            margin:10px;
+            .countdown-item{
+                position: relative;
+                .countdown-value{
+                    background: #fddb01;
+                    font-family: $medium;
+                    font-size: 19px;
+                    font-weight: 900;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: -0.4px;
+                    color: #1e2432;
+                    border-radius: 3px;
+                    padding:5px;
+                    min-width: 35px;
+                }
+                .countdown-type{
+                    color:#fff;
+                    font-weight: 300;
+                    font-size: 11px;
+                    margin-top: 5px;
+                }
+                i{
+                    color:#fff;
+                    position: absolute;
+                    right: -10px;
+                    top: 10px;
+                    font-size: 15px;
+                    font-family: "medium";
+                }
+            }
+            &::nth-child(4){
+                i{
+                    display:none;
+                }
+            }
+        }
+        span{
+            font-family: $medium;
+            font-size: 15px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: -0.3px;
+            color: #ffffff;
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+    .countdown-active{
+        .site-header-wrapper{
+            display:flex;
+            flex-wrap: wrap;
+            .for-countdown-2{
+                order:2;
+                .mbHeader{
+                    position: unset;
+                }
+            }
+            .for-countdown-1{
+                order:1;
+            }
+            .for-countdown-3{
+                order:3;
+            }
+        }
+    }
+    .mini-login-ready.countdown-active{
+        .countdown-banner{
+            display: none;
+        }
+    }
+    .countdown-banner{
+        background-image: url(/UPLOAD/BANNERS/countdown/countdown-mobile.png);
+        flex-wrap: wrap;
+        height: auto;
+        text-align: center;
+        .countdown-text{
+            &.mobile-element{
+                font-size: 13px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: -0.3px;
+                color: #ffffff;
+                margin:15px 0px 10px 0px;
+            }
+        }
+        .countdown-wrapper{
+            .countdown-icon{
+                width:65px;
+            }
+        }
+    }
+}
+
+
+
+/* Black Friday Sayaç Bitiş  */
+
+
+
+
+
 .site-discount-banner{
-    display: none;
     @include cover-background(#{$baseHref + "/UPLOAD/BANNERS/duyuru/header-duyuru.png"});
     @include flex();
     align-items: center;
@@ -1060,13 +1202,25 @@ body.ems-logoff{
 }
 
 
-/* Header Kurumsal Link Yönlendirmesi */
-
 .corporate-link{
-    position: fixed;
-    left: 0px;
-    top: 180px;
-    img{
-        width:34px;
+    display: none;
+}
+/* Header Kurumsal Link Yönlendirmesi */
+@media screen and (min-width: 1024px){
+    .corporate-link {
+        display:block;
+        position: fixed;
+        top: 233px;
+        background: #10aac1;
+        text-align: center;
+        left: -55px;
+        transform: rotate(-90deg);
+        color: #fff;
+        font-family: medium;
+        a {
+                width: 145px;
+                display: block;
+                padding: 10px;
+        }
     }
 }

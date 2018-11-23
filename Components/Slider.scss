@@ -1010,3 +1010,16 @@ button.swiper-pagination-bullet {
         }
     }
 }
+
+
+
+/*  Custom CSS */
+@media screen and (max-width: 850px){
+
+    .swiper-pagination-bullet{
+        border-radius: 10px;
+        width:8px;
+        height:8px;
+        margin:5px 2px !important;
+    }
+}

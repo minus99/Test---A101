@@ -218,7 +218,7 @@ body.ems-login.mini-login-ready{
                 position: fixed;
                 width: 100%; 
                 height: calc(100vh - 50px);
-                top: -100%;
+                top: -110%;
                 left: 0;
                 animation: none;
                 @include transition(top 333ms cubic-bezier(0.25, 0.1, 0.25, 1));

@@ -63,7 +63,8 @@
     right: 0;
     z-index: 25;
     width: 100%;
-    max-width: 620px;
+    /*max-width: 620px;*/
+    max-width: 900px;
     height: auto;
     background: #fff; 
     @include setTransform(translateY(-50%));
@@ -108,8 +109,6 @@
         display: none;
     }
     &-footer{
-        overflow-x: hidden;
-        max-height: 390px;
     }
     &-btns{
         width: 100%;
@@ -123,6 +122,7 @@
             i{display: none;}
         }
     }
+    /*  Ürüm detay Sepete Eklendikten sonra Çıkan popuptaki Slider Ayarları. 
     .swiper-container{
         border-top:2px solid $border;
         margin-top: 20px;
@@ -197,20 +197,46 @@
                 .ems-prd-add-cart{
                     flex-grow: inherit;
                     max-width: 130px;
-                }
-                .ems-prd-add-cart-inner{
-                    position: relative;
-                    bottom: inherit;
-                    left: inherit;
-                    transition: none;
-                }
-                .ems-prd-add-cart-inner{
-                    .urunListe_sepet{
-                        table{
-                            display: table !important;
+                }*/
+                .swiper-container{
+                    margin-top:30px;
+                    .swiper-title{
+                        span{
+                            font-size:23px !important;
                         }
                     }
-                }
+                    .swiper-button-next{
+                        i{
+                            &::before{
+                                content:'\e903';
+                                color:#fff;
+                            }
+                        }
+                    }
+                    .swiper-button-prev{
+                        i{
+                            &::before{
+                                content:'\e901';
+                                color:#fff;
+                            }
+                        }
+                    }
+                    ul.emosInfinite{                
+                        .ems-prd-add-cart-inner{
+                            .urunListe_sepet{
+                                table{
+                                    display: table !important;
+                                }
+                            }
+                            .urunListe_stokHaberci{
+                                table{
+                                    display:table !important;
+                                }
+                            }
+                        }
+                    }
+                }    
+                /*
                 .ems-prd-name{
                     margin-bottom: 5px;
                     font-size: 16px;
@@ -235,7 +261,7 @@
         &.result-found{
             display: block;
         }
-    }
+    }*/
 }
 .customPopup{ z-index: 21; }
 
@@ -1283,4 +1309,95 @@ body.suggestions-popup-ready{
     background: url('/upload/yerli-uretim.png');
     background-repeat: no-repeat;
     bottom: 0px;
+}
+
+
+/* Ürün detay İLgili Ürünler Slider */
+
+.product-detail-recommended-products{
+    .swiper-container{
+        .swiper-wrapper{
+            display:flex !important;
+        }
+        .swiper-button-prev{
+            left:0px !important;
+            display:block !important;
+        }
+        .swiper-button-next{
+            display:block !important;
+            right:0px !important;
+        }
+        .swiper-pagination{
+            display: block !important;
+        }
+    }
+}
+
+
+/* Ürün Detay Kargo Bedava */
+
+.ems-prd-cargo-free{
+    .ems-prd-cargo-free-wrapper{
+        display: flex;
+        align-items: center;
+        width: 178px;
+        justify-content: space-around;
+        padding: 11px 10px;
+        margin-top: 30px;
+        background: #f3f5f9;
+        border-radius: 3px;
+        span {
+            width: 90px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.33;
+            letter-spacing: -0.5px;
+            color: #1e2432;
+        }
+        img {
+            width: 50px;
+        }
+    }
+}
+
+.ems-prd-cargo-money{
+    .ems-prd-cargo-money-wrapper{
+        display: flex;
+        align-items: center;
+        width: 178px;
+        justify-content: space-around;
+        padding: 11px 10px;
+        margin-top: 30px;
+        background: #f3f5f9;
+        border-radius: 3px;
+        span {
+            width: 90px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.33;
+            letter-spacing: -0.5px;
+            color: #1e2432;
+        }
+        img {
+            width: 50px;
+        }
+    }
+    span.cargoPrice{
+        display:block;
+        margin-left:10px;
+        margin-top:10px;
+        font-size: 12px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #10aac1;
+    }
 }

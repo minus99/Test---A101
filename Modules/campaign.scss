@@ -1,4 +1,10 @@
 .firsatlar-page-slider{
+    .swiper-button-prev{
+        left:0 !important;
+    }   
+    .swiper-button-next{
+        right:0 !important; 
+    }
     margin:30px 0px;
     .ems-prd-campaign-temp{
         margin: 0 auto;
@@ -27,3 +33,4 @@
     }
 
 }
+
